@@ -158,6 +158,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
   min-width: 420px;
   border-collapse: collapse;
   background: #fff;
+  table-layout: fixed;
 }
 .comp-simple th {
   padding: 11px 14px;
@@ -166,7 +167,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
   text-align: left;
   color: #fff;
 }
-.comp-simple th:first-child { background: #f5f5f7; color: #888; font-size: 12px; }
+.comp-simple th:first-child { background: #f5f5f7; color: #888; font-size: 12px; width: 32%; }
 .comp-simple th:nth-child(2) { background: #1565C0; }
 .comp-simple th:nth-child(3) { background: #C62828; }
 .comp-simple td {
@@ -248,6 +249,21 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
   .page-title { padding: 28px 32px 0; }
   .tab-btn-row { padding: 10px 32px; }
 }
+.price-table { width:100%; border-collapse:collapse; font-size:13px; }
+.price-table thead th { padding:7px 10px; text-align:center; font-weight:600; font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:#fff; border-bottom:2px solid rgba(0,0,0,.1); }
+.price-table thead th:first-child { background:#555; text-align:left; }
+.price-table thead th:nth-child(2) { background:#C62828; }
+.price-table thead th:nth-child(3) { background:#1565C0; }
+.price-table td { padding:5px 10px; text-align:center; border-bottom:1px solid #f0f0f5; font-variant-numeric:tabular-nums; font-size:13px; }
+.price-table td:first-child { text-align:left; color:#666; font-size:12px; background:#fafafa; }
+.price-table tr:nth-child(even) td:not(:first-child) { background:#fafafa; }
+.price-table .pt-win { color:#1b7a34; font-weight:700; }
+.price-table .pt-lose { color:#bbb; }
+.price-table .pt-eq { color:#555; font-weight:600; }
+.price-section-title { padding:14px 16px 6px; font-size:12px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:#888; border-top:1px solid #e5e5ea; margin-top:8px; }
+.price-section-title:first-child { border-top:none; margin-top:0; }
+.ipid-note { display:flex; align-items:flex-start; gap:8px; background:#f5f5f7; border-left:3px solid #aaa; border-radius:6px; padding:10px 14px; margin:0 0 4px; font-size:12px; color:#555; line-height:1.5; }
+.ipid-note .ipid-icon { flex-shrink:0; font-size:14px; margin-top:1px; }
 </style>
 </head>
 <body>
@@ -260,6 +276,8 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
   <button class="nav-btn" data-cat="informatica">💻 Informática</button>
   <button class="nav-btn" data-cat="smartphones">📱 Smartphones</button>
   <button class="nav-btn" data-cat="fotografia">📷 Fotografia</button>
+  <button class="nav-btn" data-cat="consolas">🎮 Consolas</button>
+  <button class="nav-btn" data-cat="smartwatch">⌚ Smartwatch</button>
 </nav>
 
 <!-- CATEGORIA: IMAGEM E SOM -->
@@ -437,7 +455,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
           <tbody>
             <tr class="row-section"><td colspan="3">Identificação</td></tr>
             <tr><td class="td-label">Seguradora</td><td class="td-rp">D&amp;G · Espanha · LPS PT 5002</td><td class="td-wo">D&amp;G · Espanha · LPS PT 5002 <strong>(mesma seguradora)</strong></td></tr>
-            <tr><td class="td-label">Preço</td><td class="td-rp"><strong>€2,49/mês</strong> · débito direto conta</td><td class="td-wo plus"><strong>€2,49/mês</strong> · débito conta <em>ou</em> cartão</td></tr>
+            <tr><td class="td-label">Preço</td><td class="td-rp"><strong>€2,49/mês</strong> · débito direto em conta ou cartão</td><td class="td-wo plus"><strong>€2,49/mês</strong> · débito conta <em>ou</em> cartão</td></tr>
             <tr><td class="td-label">Contrato</td><td class="td-rp">Subscrição anual renovável automaticamente</td><td class="td-wo">Subscrição anual renovável automaticamente</td></tr>
             <tr class="row-section"><td colspan="3">⚡ Diferenças — coberturas</td></tr>
             <tr><td class="td-label">Avarias mecân./elétr.</td><td class="td-rp plus">✅ Cobertas (incluindo uso e desgaste)</td><td class="td-wo minus">❌ Não cobertas — apenas dano acidental, roubo e furto</td></tr>
@@ -596,7 +614,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row highlight"><span class="cov-icon">👕</span><div>Lavandaria: até <strong>100€ por avaria</strong> <span class="cov-note" style="display:inline">(máquinas lavar/secar roupa)</span></div></div>
         <div class="cov-row highlight"><span class="cov-icon">⏱️</span><div><strong>100€</strong> se reparação &gt; <strong>10 dias úteis</strong> <div class="cov-note">Melhor que DA6 que exige &gt;15 dias</div></div></div>
         <div class="cov-row highlight"><span class="cov-icon">🚚</span><div>Reinstalação incluída em caso de mudança</div></div>
-        <div class="cov-row"><span class="cov-icon">💳</span><div>Pagamento mensal por débito direto · 1.ª fração na loja · renovação anual</div></div>
+        <div class="cov-row"><span class="cov-icon">💳</span><div>Pagamento mensal por débito direto em conta ou cartão · 1.ª fração na loja · renovação anual</div></div>
       </div>
     </div>
 
@@ -696,7 +714,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
           <div class="prod-card-price">€3,49<span style="font-size:16px;font-weight:400;opacity:.85">/mês</span></div>
           <div class="prod-card-desc">Avarias + dano acidental + benefícios exclusivos Gama Branca</div>
         </div>
-        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Avarias mecânicas e elétricas (incluindo uso e desgaste)</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Avarias mecânicas e elétricas (incl. uso e desgaste) <strong>após fim da garantia do fabricante</strong><div class="cov-note">Durante a garantia do fabricante: apenas dano acidental e furto qualificado</div></div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong> — cobertura não incluída no DA6 nem no DPV</div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div>Peças, mão-de-obra, transporte e deslocação incluídos</div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div>Acessórios de origem cobertos</div></div>
@@ -710,7 +728,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row highlight"><span class="cov-icon">⏱️</span><div><strong>100€</strong> de compensação se reparação &gt; <strong>10 dias úteis</strong><div class="cov-note">Superior ao DA6 que exige &gt;15 dias</div></div></div>
         <div class="cov-row highlight"><span class="cov-icon">🚚</span><div>Reinstalação do equipamento incluída em caso de mudança de casa</div></div>
         <div style="padding:8px 20px 4px;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#888;background:#f5f5f7;border-top:1px solid #e5e5ea;">Pagamento</div>
-        <div class="cov-row"><span class="cov-icon">💳</span><div>Mensal por débito direto · 1.ª fração na loja · restantes 11 frações por débito</div></div>
+        <div class="cov-row"><span class="cov-icon">💳</span><div>Mensal por débito direto em conta ou cartão · 1.ª fração na loja</div></div>
         <div class="cov-row"><span class="cov-icon">🔁</span><div>Subscrição anual · renovação automática</div></div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação de sinistro: 14 dias corridos</div></div>
       </div>
@@ -793,12 +811,12 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
           <div class="prod-card-price">€1,99<span style="font-size:16px;font-weight:400;opacity:.85">/mês</span></div>
           <div class="prod-card-desc">Avarias + dano acidental + benefícios especiais</div>
         </div>
-        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Avarias mecânicas e elétricas (incluindo uso e desgaste)</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Avarias mecânicas e elétricas (incl. uso e desgaste) <strong>após fim da garantia do fabricante</strong><div class="cov-note">Durante a garantia do fabricante: apenas dano acidental e furto qualificado</div></div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong> incluído (ausente no DA6 e DPV)</div></div>
         <div class="cov-row highlight"><span class="cov-icon">🔄</span><div><strong>Substituição automática</strong> após 3 avarias iguais em 12 meses</div></div>
         <div class="cov-row highlight"><span class="cov-icon">⏱️</span><div><strong>100€</strong> se reparação &gt; <strong>10 dias úteis</strong></div></div>
         <div class="cov-row highlight"><span class="cov-icon">🚚</span><div>Reinstalação incluída em caso de mudança de casa</div></div>
-        <div class="cov-row"><span class="cov-icon">💳</span><div>Pagamento mensal por débito direto · renovação anual</div></div>
+        <div class="cov-row"><span class="cov-icon">💳</span><div>Pagamento mensal por débito direto em conta ou cartão · renovação anual</div></div>
       </div>
     </div>
 
@@ -942,7 +960,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
           <div class="prod-card-price">€1,99<span style="font-size:16px;font-weight:400;opacity:.85">/mês</span></div>
           <div class="prod-card-desc">Avarias + dano acidental + benefícios especiais</div>
         </div>
-        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Avarias mecânicas e elétricas (incluindo uso e desgaste)</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Avarias mecânicas e elétricas (incl. uso e desgaste) <strong>após fim da garantia do fabricante</strong><div class="cov-note">Durante a garantia do fabricante: apenas dano acidental e furto qualificado</div></div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong> — cobertura não incluída no DA6 nem no DPV</div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div>Peças, mão-de-obra, transporte e deslocação incluídos</div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div>Acessórios de origem cobertos</div></div>
@@ -954,7 +972,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row highlight"><span class="cov-icon">🍽️</span><div>Comida ao domicílio/restaurante: até <strong>100€ por avaria</strong><div class="cov-note">Para equipamentos de cozinha (mini forno, micro-ondas, etc.)</div></div></div>
         <div class="cov-row highlight"><span class="cov-icon">🚚</span><div>Reinstalação do equipamento incluída em caso de mudança de casa</div></div>
         <div style="padding:8px 20px 4px;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#888;background:#f5f5f7;border-top:1px solid #e5e5ea;">Pagamento</div>
-        <div class="cov-row"><span class="cov-icon">💳</span><div>Mensal por débito direto · 1.ª fração na loja · restantes 11 frações por débito</div></div>
+        <div class="cov-row"><span class="cov-icon">💳</span><div>Mensal por débito direto em conta ou cartão · 1.ª fração na loja</div></div>
         <div class="cov-row"><span class="cov-icon">🔁</span><div>Subscrição anual · renovação automática</div></div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação de sinistro: 14 dias corridos</div></div>
       </div>
@@ -975,6 +993,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
     <button class="tab-btn active" data-cat="informatica" data-tab="resumo">Resumo</button>
     <button class="tab-btn" data-cat="informatica" data-tab="comp3">+3 Anos (DA6)</button>
     <button class="tab-btn" data-cat="informatica" data-tab="comp1">+1 Ano (DPV)</button>
+    <button class="tab-btn" data-cat="informatica" data-tab="mensal">Mensal RP vs Worten</button>
     <button class="tab-btn" data-cat="informatica" data-tab="exclrp">⭐ Excl. RP</button>
     <button class="tab-btn" data-cat="informatica" data-tab="exclwo">Excl. Worten</button>
   </div>
@@ -983,7 +1002,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
 
     <!-- RESUMO -->
     <div id="it-resumo" class="tab-panel active">
-      <div class="eyebrow">Opções comparáveis — Garantia Extra</div>
+      <div class="eyebrow">Opções comparáveis — Garantia Extra (prémio único)</div>
       <div class="table-wrap">
         <table class="comp-simple">
           <thead>
@@ -1008,6 +1027,27 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         </table>
       </div>
       <div class="note-box">⚠️ Na garantia de avaria +3 anos, a Worten é €61 mais barata. Mas a RP cobre desgaste gradual e acessórios de origem — a HighDome exclui ambos, além de oxidação e burn-in de ecrã. No +1 ano a RP é €5 mais barata.</div>
+
+      <div class="eyebrow" style="margin-top:24px;">Opções comparáveis — Mensais (subscrição)</div>
+      <div class="table-wrap">
+        <table class="comp-simple">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>🔵 Rádio Popular (D&amp;G)</th>
+              <th>🔴 Worten (D&amp;G)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mensal — dano acidental + furto qualificado</td>
+              <td>Protech (DDL) · <strong>€5,49/mês</strong></td>
+              <td>Resolve Flex (AS5) · <strong>€6,49/mês</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">⚠️ Coberturas complementares: Protech RP cobre avarias (e desgaste) mas <strong>não</strong> cobre roubo; Worten cobre roubo mas <strong>não</strong> cobre avarias. RP é €1/mês mais barato e tem substituição automática após 3 avarias iguais.</div>
 
       <div class="eyebrow" style="margin-top:24px;">Exclusivos RP</div>
       <div class="table-wrap">
@@ -1134,6 +1174,42 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
       </div>
     </div>
 
+    <!-- MENSAL RP vs WORTEN -->
+    <div id="it-mensal" class="tab-panel">
+      <div class="brand-row">
+        <span class="brand-pill pill-rp">🔵 RP: Protech (DDL) — €5,49/mês</span>
+        <span class="brand-pill pill-wo">🔴 Worten: Worten Resolve Flex (AS5_AW5) — €6,49/mês</span>
+      </div>
+      <div class="note-box" style="margin:12px 16px;">⚠️ Estes seguros mensais <strong>não cobrem os mesmos riscos</strong>: o Protech RP cobre avarias mas não roubo; o Worten cobre roubo mas não avarias. Escolhe consoante o risco que mais te preocupa.</div>
+      <div class="table-wrap">
+        <table class="comp-table">
+          <thead><tr><th class="col-label"></th><th class="col-rp">🔵 RP — Protech (DDL)</th><th class="col-wo">🔴 Worten — Resolve Flex (AS5_AW5)</th></tr></thead>
+          <tbody>
+            <tr class="row-section"><td colspan="3">Dados gerais</td></tr>
+            <tr><td class="td-label">Produto</td><td class="td-rp">Mega Garantia Subscrição Protech</td><td class="td-wo">Worten Resolve Flex</td></tr>
+            <tr><td class="td-label">Seguradora</td><td class="td-rp">D&amp;G Espanha · LPS PT 5002</td><td class="td-wo">D&amp;G Espanha · LPS PT 5002</td></tr>
+            <tr><td class="td-label">Preço</td><td class="td-rp plus"><strong>€5,49/mês</strong> · (−€1/mês vs Worten)</td><td class="td-wo minus"><strong>€6,49/mês</strong></td></tr>
+            <tr><td class="td-label">Pagamento</td><td class="td-rp">1.ª fração na loja · restantes por débito direto em conta ou cartão</td><td class="td-wo">1.ª fração na loja · restantes por débito direto em conta ou cartão</td></tr>
+            <tr class="row-section"><td colspan="3">⚡ Diferenças — coberturas</td></tr>
+            <tr><td class="td-label">Avarias mecânicas/elétricas</td><td class="td-rp plus">✅ Incluídas <strong>após fim da garantia do fabricante</strong> (uso e desgaste incluídos)<div class="cov-note">Durante a garantia: apenas dano acidental e furto qualificado</div></td><td class="td-wo minus">❌ Excluídas (exceto se resultantes de dano acidental)</td></tr>
+            <tr><td class="td-label">Substituição após 3 avarias iguais</td><td class="td-rp plus">✅ Substituição automática em 12 meses (após garantia do fabricante)</td><td class="td-wo minus">❌ Sem este benefício</td></tr>
+            <tr><td class="td-label">Roubo (com violência)</td><td class="td-rp minus">❌ Excluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr class="row-section"><td colspan="3">Sem diferença relevante</td></tr>
+            <tr><td class="td-label">Dano acidental (incl. líquidos)</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Furto Qualificado (arrombamento/arma)</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Peças, mão-de-obra, transporte</td><td class="td-rp plus">✅ Incluídos</td><td class="td-wo plus">✅ Incluídos</td></tr>
+            <tr><td class="td-label">Acessórios de origem</td><td class="td-rp plus">✅ Cobertos</td><td class="td-wo plus">✅ Cobertos</td></tr>
+            <tr><td class="td-label">Perda do equipamento</td><td class="td-rp minus">❌ Excluída</td><td class="td-wo minus">❌ Excluída</td></tr>
+            <tr><td class="td-label">Dano estético · uso profissional</td><td class="td-rp minus">❌ Excluídos</td><td class="td-wo minus">❌ Excluídos</td></tr>
+            <tr><td class="td-label">Limite por sinistro</td><td class="td-rp">Preço de compra</td><td class="td-wo">Preço de compra</td></tr>
+            <tr><td class="td-label">Prazo participação sinistro</td><td class="td-rp">14 dias corridos</td><td class="td-wo">14 dias corridos</td></tr>
+            <tr><td class="td-label">Cancelamento 30 dias</td><td class="td-rp plus">✅ Reembolso total</td><td class="td-wo plus">✅ Reembolso total</td></tr>
+            <tr><td class="td-label">Cobertura geográfica</td><td class="td-rp">Mundial · reparação em Portugal</td><td class="td-wo">Mundial · reparação em Portugal</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <!-- EXCLUSIVOS RP -->
     <div id="it-exclrp" class="tab-panel">
       <div class="brand-row">
@@ -1148,7 +1224,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
           <div class="prod-card-price">€5,49<span style="font-size:16px;font-weight:400;opacity:.85">/mês</span></div>
           <div class="prod-card-desc">Avarias + dano acidental + furto qualificado</div>
         </div>
-        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Avarias mecânicas e elétricas (incluindo uso e desgaste)</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Avarias mecânicas e elétricas (incl. uso e desgaste) <strong>após fim da garantia do fabricante</strong><div class="cov-note">Durante a garantia do fabricante: apenas dano acidental e furto qualificado</div></div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong> incluído</div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div>Furto Qualificado (arrombamento, arma aparente)</div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div>Peças, mão-de-obra, transporte incluídos</div></div>
@@ -1157,7 +1233,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row"><span class="cov-icon minus">❌</span><div>Roubo e perda — excluídos (apenas furto qualificado coberto)</div></div>
         <div class="cov-row"><span class="cov-icon minus">❌</span><div>Uso profissional excluído</div></div>
         <div style="padding:8px 20px 4px;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#888;background:#f5f5f7;border-top:1px solid #e5e5ea;">Pagamento</div>
-        <div class="cov-row"><span class="cov-icon">💳</span><div>Mensal por débito direto · 1.ª fração na loja · renovação anual</div></div>
+        <div class="cov-row"><span class="cov-icon">💳</span><div>Mensal por débito direto em conta ou cartão · 1.ª fração na loja · renovação anual</div></div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
       </div>
 
@@ -1169,7 +1245,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
           <div class="prod-card-price">€10,99<span style="font-size:16px;font-weight:400;opacity:.85">/mês</span></div>
           <div class="prod-card-desc">Cobertura completa + serviços digitais + equipamento substituto</div>
         </div>
-        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Avarias mecânicas e elétricas (incluindo uso e desgaste)</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Avarias mecânicas e elétricas (incl. uso e desgaste) <strong>após fim da garantia do fabricante</strong><div class="cov-note">Durante a garantia do fabricante: apenas dano acidental e furto qualificado</div></div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong> incluído</div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Roubo e Furto Qualificado</strong> — cobertura completa de furto</div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div>Peças, mão-de-obra, transporte incluídos</div></div>
@@ -1184,7 +1260,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row"><span class="cov-icon plus">✅</span><div>Uso profissional permitido — único produto que cobre uso laboral</div></div>
         <div class="cov-row"><span class="cov-icon minus">❌</span><div>Dano estético · negligência / mau uso</div></div>
         <div style="padding:8px 20px 4px;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#888;background:#f5f5f7;border-top:1px solid #e5e5ea;">Pagamento</div>
-        <div class="cov-row"><span class="cov-icon">💳</span><div>Mensal por débito direto · 1.ª fração na loja · renovação anual automática</div></div>
+        <div class="cov-row"><span class="cov-icon">💳</span><div>Mensal por débito direto em conta ou cartão · 1.ª fração na loja · renovação anual automática</div></div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
       </div>
 
@@ -1381,7 +1457,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row"><span class="cov-icon minus">❌</span><div>Acessórios e consumíveis excluídos (carregador, capa, etc.)</div></div>
         <div style="padding:8px 20px 4px;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#888;background:#f5f5f7;border-top:1px solid #e5e5ea;">Co-pagamento</div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Co-pagamento de <strong>10%</strong> do valor de compra por sinistro · máximo <strong>€100</strong><div class="cov-note">Smartphone €999: co-pagamento de ~€99,90</div></div></div>
-        <div class="cov-row"><span class="cov-icon">💳</span><div>Mensal por débito direto · 1.ª fração na loja · renovação anual</div></div>
+        <div class="cov-row"><span class="cov-icon">💳</span><div>Mensal por débito direto em conta ou cartão · 1.ª fração na loja · renovação anual</div></div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
       </div>
 
@@ -1625,6 +1701,287 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
   </div><!-- /tab-panels -->
 </div><!-- /cat-fotografia -->
 
+<div id="cat-consolas" class="cat-panel">
+
+  <div class="page-title">
+    <div class="meta">Categoria</div>
+    <h2>Consolas</h2>
+    <div class="badge">💶 Exemplo: Consola €509,99</div>
+  </div>
+
+  <div class="tab-btn-row">
+    <button class="tab-btn active" data-cat="consolas" data-tab="resumo">Resumo</button>
+    <button class="tab-btn" data-cat="consolas" data-tab="mensal">Mensal RP vs Worten</button>
+    <button class="tab-btn" data-cat="consolas" data-tab="exclwo">Excl. Worten</button>
+  </div>
+
+  <div class="tab-panels">
+
+    <!-- RESUMO -->
+    <div id="co-resumo" class="tab-panel active">
+      <div class="eyebrow">Opções comparáveis — Mensais (subscrição)</div>
+      <div class="table-wrap">
+        <table class="comp-simple">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>🔵 Rádio Popular (D&amp;G)</th>
+              <th>🔴 Worten (D&amp;G)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mensal — dano acidental + furto qualificado</td>
+              <td>Protech (DDL) · <strong>€5,99/mês</strong></td>
+              <td>Resolve Flex (AS5) · <strong>€5,99/mês</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">⚠️ Mesmo preço, coberturas complementares: Protech RP cobre dano acidental + furto qualificado desde o início, e passa a cobrir também <strong>avarias (incl. desgaste) após o fim da garantia do fabricante</strong>; Worten cobre roubo mas nunca cobre avarias. Protech tem substituição automática após 3 avarias iguais em 12 meses.</div>
+
+      <div class="eyebrow" style="margin-top:24px;">Exclusivos Worten — Prémio Único</div>
+      <div class="table-wrap">
+        <table class="comp-simple">
+          <thead>
+            <tr><th>Produto</th><th>Cobertura</th><th>Preço</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dano e Roubo 1 Ano (AR3)</td>
+              <td>Dano acidental + roubo + furto qualificado</td>
+              <td><strong>€36,99</strong> único</td>
+            </tr>
+            <tr>
+              <td>Dano e Roubo 2 Anos (AR4)</td>
+              <td>Dano acidental + roubo + furto qualificado</td>
+              <td><strong>€48,99</strong> único</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MENSAL RP vs WORTEN -->
+    <div id="co-mensal" class="tab-panel">
+      <div class="brand-row">
+        <span class="brand-pill pill-rp">🔵 RP: Protech (DDL) — €5,99/mês</span>
+        <span class="brand-pill pill-wo">🔴 Worten: Resolve Flex (AS5_AW5) — €5,99/mês</span>
+        <span class="brand-pill pill-ex">💶 Consola €509,99</span>
+      </div>
+      <div class="note-box" style="margin:12px 16px;">⚠️ Preço idêntico mas coberturas complementares: Protech RP cobre dano acidental + furto desde o início, e avarias apenas após o fim da garantia do fabricante; Worten cobre roubo mas nunca cobre avarias.</div>
+      <div class="table-wrap">
+        <table class="comp-table">
+          <thead><tr><th class="col-label"></th><th class="col-rp">🔵 RP — Protech (DDL)</th><th class="col-wo">🔴 Worten — Resolve Flex (AS5_AW5)</th></tr></thead>
+          <tbody>
+            <tr class="row-section"><td colspan="3">Dados gerais</td></tr>
+            <tr><td class="td-label">Produto</td><td class="td-rp">Mega Garantia Subscrição Protech</td><td class="td-wo">Worten Resolve Flex</td></tr>
+            <tr><td class="td-label">Seguradora</td><td class="td-rp">D&amp;G Espanha · LPS PT 5002</td><td class="td-wo">D&amp;G Espanha · LPS PT 5002</td></tr>
+            <tr><td class="td-label">Preço</td><td class="td-rp"><strong>€5,99/mês</strong></td><td class="td-wo"><strong>€5,99/mês</strong></td></tr>
+            <tr><td class="td-label">Pagamento</td><td class="td-rp">1.ª fração na loja · restantes por débito direto em conta ou cartão</td><td class="td-wo">1.ª fração na loja · restantes por débito direto em conta ou cartão</td></tr>
+            <tr class="row-section"><td colspan="3">⚡ Diferenças — coberturas</td></tr>
+            <tr><td class="td-label">Avarias mecânicas/elétricas</td><td class="td-rp plus">✅ Incluídas <strong>após fim da garantia do fabricante</strong> (uso e desgaste incluídos)<div class="cov-note">Durante a garantia do fabricante: apenas dano acidental e furto qualificado</div></td><td class="td-wo minus">❌ Excluídas (exceto se resultantes de dano acidental)</td></tr>
+            <tr><td class="td-label">Substituição após 3 avarias iguais</td><td class="td-rp plus">✅ Substituição automática em 12 meses (após garantia do fabricante)</td><td class="td-wo minus">❌ Sem este benefício</td></tr>
+            <tr><td class="td-label">Roubo (com violência)</td><td class="td-rp minus">❌ Excluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Sobrecarga elétrica</td><td class="td-rp muted">Não mencionada nas exclusões</td><td class="td-wo minus">❌ Excluída explicitamente</td></tr>
+            <tr class="row-section"><td colspan="3">Sem diferença relevante</td></tr>
+            <tr><td class="td-label">Dano acidental (incl. líquidos)</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Furto Qualificado (arrombamento/arma)</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Peças, mão-de-obra, transporte</td><td class="td-rp plus">✅ Incluídos</td><td class="td-wo plus">✅ Incluídos</td></tr>
+            <tr><td class="td-label">Acessórios de origem</td><td class="td-rp plus">✅ Cobertos</td><td class="td-wo plus">✅ Cobertos</td></tr>
+            <tr><td class="td-label">Perda do equipamento</td><td class="td-rp minus">❌ Excluída</td><td class="td-wo minus">❌ Excluída</td></tr>
+            <tr><td class="td-label">Dano estético · uso profissional</td><td class="td-rp minus">❌ Excluídos</td><td class="td-wo minus">❌ Excluídos</td></tr>
+            <tr><td class="td-label">Limite por sinistro</td><td class="td-rp">Preço de compra</td><td class="td-wo">Preço de compra</td></tr>
+            <tr><td class="td-label">Prazo participação sinistro</td><td class="td-rp">14 dias corridos</td><td class="td-wo">14 dias corridos</td></tr>
+            <tr><td class="td-label">Cancelamento 30 dias</td><td class="td-rp plus">✅ Reembolso total</td><td class="td-wo plus">✅ Reembolso total</td></tr>
+            <tr><td class="td-label">Cobertura geográfica</td><td class="td-rp">Mundial · reparação em Portugal</td><td class="td-wo">Mundial · reparação em Portugal</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- EXCLUSIVOS WORTEN -->
+    <div id="co-exclwo" class="tab-panel">
+      <div class="brand-row">
+        <span class="brand-pill pill-wo">Exclusivos Worten: Dano e Roubo 1 Ano (AR3) · Dano e Roubo 2 Anos (AR4)</span>
+      </div>
+
+      <!-- AR3 — 1 Ano -->
+      <div class="prod-card" style="max-width:640px;margin-bottom:24px;">
+        <div class="prod-card-head wo">
+          <div class="prod-card-ref">Ref. AR3 · Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Worten</div>
+          <div class="prod-card-name">Worten Resolve — Dano e Roubo 1 Ano</div>
+          <div class="prod-card-price">€36,99<span style="font-size:15px;font-weight:400;opacity:.85"> prémio único</span></div>
+          <div class="prod-card-desc">Dano acidental + roubo + furto qualificado — 12 meses</div>
+        </div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong> (incluindo líquidos e humidade)</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Roubo</strong> (com violência) e <strong>Furto Qualificado</strong></div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Peças, mão-de-obra, transporte incluídos</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Acessórios de origem cobertos</div></div>
+        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Avarias mecânicas/elétricas excluídas (exceto as resultantes de dano acidental)</div></div>
+        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Perda do equipamento · dano estético · uso profissional</div></div>
+        <div class="cov-row"><span class="cov-icon">⚠️</span><div>Limite acumulado dano acidental = preço de compra · substituição cancela apólice</div></div>
+        <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
+      </div>
+
+      <!-- AR4 — 2 Anos -->
+      <div class="prod-card" style="max-width:640px;">
+        <div class="prod-card-head wo">
+          <div class="prod-card-ref">Ref. AR4 · Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Worten</div>
+          <div class="prod-card-name">Worten Resolve — Dano e Roubo 2 Anos</div>
+          <div class="prod-card-price">€48,99<span style="font-size:15px;font-weight:400;opacity:.85"> prémio único</span></div>
+          <div class="prod-card-desc">Dano acidental + roubo + furto qualificado — 24 meses</div>
+        </div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong> (incluindo líquidos e humidade)</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Roubo</strong> (com violência) e <strong>Furto Qualificado</strong></div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Peças, mão-de-obra, transporte incluídos</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Acessórios de origem cobertos</div></div>
+        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Avarias mecânicas/elétricas excluídas (exceto as resultantes de dano acidental)</div></div>
+        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Perda do equipamento · dano estético · uso profissional</div></div>
+        <div class="cov-row"><span class="cov-icon">💡</span><div>Idêntico ao AR3 mas com 24 meses de cobertura</div></div>
+        <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
+      </div>
+    </div>
+
+  </div><!-- /tab-panels -->
+</div><!-- /cat-consolas -->
+
+<div id="cat-smartwatch" class="cat-panel">
+
+  <div class="page-title">
+    <div class="meta">Categoria</div>
+    <h2>Smartwatch</h2>
+    <div class="badge">💶 Exemplo: Smartwatch €199,99</div>
+  </div>
+
+  <div class="tab-btn-row">
+    <button class="tab-btn active" data-cat="smartwatch" data-tab="resumo">Resumo</button>
+    <button class="tab-btn" data-cat="smartwatch" data-tab="mensal">Mensal RP vs Worten</button>
+    <button class="tab-btn" data-cat="smartwatch" data-tab="exclrp">⭐ Excl. RP</button>
+  </div>
+
+  <div class="tab-panels">
+
+    <!-- RESUMO -->
+    <div id="sw-resumo" class="tab-panel active">
+      <div class="eyebrow">Opções comparáveis — Mensais (subscrição)</div>
+      <div class="table-wrap">
+        <table class="comp-simple">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>🔵 Rádio Popular</th>
+              <th>🔴 Worten</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mensal — dano acidental + furto qualificado</td>
+              <td>ProTech Subscrição · <strong>€4,99/mês</strong></td>
+              <td>Worten Resolve Flex · <strong>€4,99/mês</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">⚠️ Mesmo preço, coberturas complementares: ProTech RP cobre dano acidental + furto qualificado desde o início, e passa a cobrir também <strong>avarias (incl. desgaste) após o fim da garantia do fabricante</strong>; Worten cobre roubo mas nunca cobre avarias. ProTech tem substituição automática após 3 avarias iguais em 12 meses.</div>
+
+      <div class="eyebrow" style="margin-top:24px;">Exclusivos RP — Prémio Único</div>
+      <div class="table-wrap">
+        <table class="comp-simple">
+          <thead>
+            <tr><th>Produto</th><th>Cobertura</th><th>Preço</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dano Acidental +1 Ano</td>
+              <td>Dano acidental (incluindo quebra de ecrã)</td>
+              <td><strong>€59,00</strong> único</td>
+            </tr>
+            <tr>
+              <td>Quebra de Ecrã +1 Ano</td>
+              <td>Quebra/fissura do ecrã</td>
+              <td><strong>€44,00</strong> único</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MENSAL RP vs WORTEN -->
+    <div id="sw-mensal" class="tab-panel">
+      <div class="brand-row">
+        <span class="brand-pill pill-rp">🔵 RP: ProTech Subscrição — €4,99/mês</span>
+        <span class="brand-pill pill-wo">🔴 Worten: Resolve Flex — €4,99/mês</span>
+        <span class="brand-pill pill-ex">💶 Smartwatch €199,99</span>
+      </div>
+      <div class="note-box" style="margin:12px 16px;">⚠️ Preço idêntico mas coberturas complementares: ProTech RP cobre dano acidental + furto desde o início, e avarias apenas após o fim da garantia do fabricante; Worten cobre roubo mas nunca cobre avarias.</div>
+      <div class="table-wrap">
+        <table class="comp-table">
+          <thead><tr><th class="col-label"></th><th class="col-rp">🔵 RP — ProTech Subscrição</th><th class="col-wo">🔴 Worten — Resolve Flex</th></tr></thead>
+          <tbody>
+            <tr class="row-section"><td colspan="3">Dados gerais</td></tr>
+            <tr><td class="td-label">Preço</td><td class="td-rp"><strong>€4,99/mês</strong></td><td class="td-wo"><strong>€4,99/mês</strong></td></tr>
+            <tr><td class="td-label">Pagamento</td><td class="td-rp">1.ª fração na loja · restantes por débito direto em conta ou cartão</td><td class="td-wo">1.ª fração na loja · restantes por débito direto em conta ou cartão</td></tr>
+            <tr class="row-section"><td colspan="3">⚡ Diferenças — coberturas</td></tr>
+            <tr><td class="td-label">Avarias mecânicas/elétricas</td><td class="td-rp plus">✅ Incluídas <strong>após fim da garantia do fabricante</strong> (uso e desgaste incluídos)<div class="cov-note">Durante a garantia do fabricante: apenas dano acidental e furto qualificado</div></td><td class="td-wo minus">❌ Excluídas (exceto se resultantes de dano acidental)</td></tr>
+            <tr><td class="td-label">Substituição após 3 avarias iguais</td><td class="td-rp plus">✅ Substituição automática em 12 meses (após garantia do fabricante)</td><td class="td-wo minus">❌ Sem este benefício</td></tr>
+            <tr><td class="td-label">Roubo (com violência)</td><td class="td-rp minus">❌ Excluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr class="row-section"><td colspan="3">Sem diferença relevante</td></tr>
+            <tr><td class="td-label">Dano acidental (incl. líquidos)</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Furto Qualificado (arrombamento/arma)</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Peças, mão-de-obra, transporte</td><td class="td-rp plus">✅ Incluídos</td><td class="td-wo plus">✅ Incluídos</td></tr>
+            <tr><td class="td-label">Perda do equipamento</td><td class="td-rp minus">❌ Excluída</td><td class="td-wo minus">❌ Excluída</td></tr>
+            <tr><td class="td-label">Dano estético · uso profissional</td><td class="td-rp minus">❌ Excluídos</td><td class="td-wo minus">❌ Excluídos</td></tr>
+            <tr><td class="td-label">Limite por sinistro</td><td class="td-rp">Preço de compra</td><td class="td-wo">Preço de compra</td></tr>
+            <tr><td class="td-label">Prazo participação sinistro</td><td class="td-rp">14 dias corridos</td><td class="td-wo">14 dias corridos</td></tr>
+            <tr><td class="td-label">Cancelamento 30 dias</td><td class="td-rp plus">✅ Reembolso total</td><td class="td-wo plus">✅ Reembolso total</td></tr>
+            <tr><td class="td-label">Cobertura geográfica</td><td class="td-rp">Mundial · reparação em Portugal</td><td class="td-wo">Mundial · reparação em Portugal</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- EXCLUSIVOS RP -->
+    <div id="sw-exclrp" class="tab-panel">
+      <div class="brand-row">
+        <span class="brand-pill pill-rp">Exclusivos RP: Dano Acidental +1 Ano · Quebra de Ecrã +1 Ano</span>
+      </div>
+
+      <!-- Dano Acidental +1 Ano -->
+      <div class="prod-card" style="max-width:640px;margin-bottom:24px;">
+        <div class="prod-card-head rp">
+          <div class="prod-card-ref">Prémio único · Exclusivo Rádio Popular</div>
+          <div class="prod-card-name">RP — Dano Acidental +1 Ano</div>
+          <div class="prod-card-price">€59,00<span style="font-size:15px;font-weight:400;opacity:.85"> prémio único</span></div>
+          <div class="prod-card-desc">Dano acidental (incluindo quebra de ecrã) — 12 meses</div>
+        </div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong> (incluindo líquidos, quedas e quebra de ecrã)</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Peças, mão-de-obra, transporte incluídos</div></div>
+        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Avarias mecânicas/elétricas excluídas</div></div>
+        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Roubo e furto excluídos</div></div>
+        <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
+      </div>
+
+      <!-- Quebra de Ecrã +1 Ano -->
+      <div class="prod-card" style="max-width:640px;">
+        <div class="prod-card-head rp">
+          <div class="prod-card-ref">Prémio único · Exclusivo Rádio Popular</div>
+          <div class="prod-card-name">RP — Quebra de Ecrã +1 Ano</div>
+          <div class="prod-card-price">€44,00<span style="font-size:15px;font-weight:400;opacity:.85"> prémio único</span></div>
+          <div class="prod-card-desc">Cobertura específica para quebra/fissura do ecrã — 12 meses</div>
+        </div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Quebra e fissura do ecrã</strong> (quedas e impactos)</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Peças, mão-de-obra, transporte incluídos</div></div>
+        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Outros danos acidentais excluídos (líquidos, danos no corpo, etc.)</div></div>
+        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Avarias mecânicas/elétricas, roubo e furto excluídos</div></div>
+        <div class="cov-row"><span class="cov-icon">💡</span><div>Opção mais económica se o principal risco for apenas quebra de ecrã (€15 menos que Dano Acidental)</div></div>
+        <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
+      </div>
+    </div>
+
+  </div><!-- /tab-panels -->
+</div><!-- /cat-smartwatch -->
+
 <script>
 // Categorias
 var navBtns = document.querySelectorAll('.nav-btn[data-cat]');
@@ -1642,7 +1999,7 @@ for (var i = 0; i < navBtns.length; i++) {
 }
 
 // Tabs via botões
-var prefixMap = { 'imagem': 'imagem', 'gama-branca': 'gb', 'pequenos': 'pd', 'informatica': 'it', 'smartphones': 'sm', 'fotografia': 'fo' };
+var prefixMap = { 'imagem': 'imagem', 'gama-branca': 'gb', 'pequenos': 'pd', 'informatica': 'it', 'smartphones': 'sm', 'fotografia': 'fo', 'consolas': 'co', 'smartwatch': 'sw' };
 var tabBtns = document.querySelectorAll('.tab-btn');
 for (var i = 0; i < tabBtns.length; i++) {
   tabBtns[i].addEventListener('click', function() {
@@ -1659,6 +2016,16 @@ for (var i = 0; i < tabBtns.length; i++) {
     window.scrollTo(0, 48);
   });
 }
+
+// Injetar nota de fonte (IPID) em todas as categorias
+(function() {
+  var note = '<div class="ipid-note"><span class="ipid-icon">📋</span><span>As comparações apresentadas foram elaboradas com base nos <strong>IPID</strong> (Documento de Informação sobre o Produto de Seguros) de cada seguro/extensão de garantia, disponíveis nos sites da Worten e da Rádio Popular, bem como nos seguros disponibilizados ao simular a compra do artigo utilizado como exemplo de preço.</span></div>';
+  var panels = document.querySelectorAll('.cat-panel');
+  for (var i = 0; i < panels.length; i++) {
+    var title = panels[i].querySelector('.page-title');
+    if (title) title.insertAdjacentHTML('afterend', note);
+  }
+})();
 </script>
 </body>
 </html>
