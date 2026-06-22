@@ -278,6 +278,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
   <button class="nav-btn" data-cat="fotografia">📷 Fotografia</button>
   <button class="nav-btn" data-cat="consolas">🎮 Consolas</button>
   <button class="nav-btn" data-cat="smartwatch">⌚ Smartwatch</button>
+  <button class="nav-btn" data-cat="trotineta">🛴 Trotinetes</button>
 </nav>
 
 <!-- CATEGORIA: IMAGEM E SOM -->
@@ -292,6 +293,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
   <!-- SELECT NATIVO — funciona em todos os browsers mobile -->
   <div class="tab-btn-row">
     <button class="tab-btn active" data-cat="imagem" data-tab="resumo">Resumo</button>
+    <button class="tab-btn" data-cat="imagem" data-tab="escaloes">Escalões de Preço</button>
     <button class="tab-btn" data-cat="imagem" data-tab="comp3">+3 Anos</button>
     <button class="tab-btn" data-cat="imagem" data-tab="comp1">+1 Ano</button>
     <button class="tab-btn" data-cat="imagem" data-tab="mensal">Mensal</button>
@@ -363,6 +365,83 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
             <div class="sum-item-price price-wo">€53,99</div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- ESCALÕES DE PREÇO — IMAGEM E SOM -->
+    <div id="imagem-escaloes" class="tab-panel">
+      <p style="font-size:13px;color:#888;margin-bottom:16px;">Os escalões de preço de produto não são exactamente iguais entre as duas insígnias. Foram seleccionadas 5 categorias comparáveis para efeitos de análise.</p>
+
+      <div class="eyebrow">Garantia Extra +1 Ano</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-lose">25,99€</td><td class="pt-win">20,00€</td><td class="pt-win">RP −6€</td></tr>
+            <tr><td>499,99€</td><td class="pt-lose">44,99€</td><td class="pt-win">35,00€</td><td class="pt-win">RP −10€</td></tr>
+            <tr><td>749,99€</td><td class="pt-lose">92,99€</td><td class="pt-win">45,00€</td><td class="pt-win">RP −48€</td></tr>
+            <tr><td>999,99€</td><td class="pt-lose">102,99€</td><td class="pt-win">50,00€</td><td class="pt-win">RP −53€</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-lose">144,99€</td><td class="pt-win">55,00€</td><td class="pt-win">RP −90€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eyebrow" style="margin-top:20px;">Garantia Extra +3 Anos</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-win">43,99€</td><td class="pt-lose">59,00€</td><td class="pt-win">Worten −15€</td></tr>
+            <tr><td>499,99€</td><td class="pt-win">77,99€</td><td class="pt-lose">79,00€</td><td class="pt-win">Worten −1€</td></tr>
+            <tr><td>749,99€</td><td class="pt-win">109,99€</td><td class="pt-lose">114,00€</td><td class="pt-win">Worten −4€</td></tr>
+            <tr><td>999,99€</td><td class="pt-lose">136,99€</td><td class="pt-win">114,00€</td><td class="pt-win">RP −23€</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-lose">179,99€</td><td class="pt-win">139,00€</td><td class="pt-win">RP −41€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eyebrow" style="margin-top:20px;">Subscrição Mensal</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-lose">N/A</td><td class="pt-win">1,99€/mês</td><td class="pt-win">Só RP</td></tr>
+            <tr><td>499,99€</td><td class="pt-eq">2,99€/mês</td><td class="pt-eq">2,99€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>749,99€</td><td class="pt-eq">3,49€/mês</td><td class="pt-eq">3,49€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>999,99€</td><td class="pt-eq">4,49€/mês</td><td class="pt-eq">4,49€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-eq">5,99€/mês</td><td class="pt-eq">5,99€/mês</td><td class="pt-eq">Igual</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box" style="margin-top:16px;">
+        <strong>+1 Ano:</strong> A RP é sempre mais barata, com uma vantagem crescente — de −6€ no escalão mais baixo até −90€ no topo.<br><br>
+        <strong>+3 Anos:</strong> Nos escalões mais baixos a Worten é mais competitiva (até −15€). A inversão ocorre entre os 749,99€ e os 999,99€, onde a RP passa a ser mais barata (até −41€ no topo).<br><br>
+        <strong>Mensal:</strong> Preços idênticos em todos os escalões (ambas D&amp;G). A RP tem produto disponível no escalão 249,99€ onde a Worten não tem oferta.
       </div>
     </div>
 
@@ -563,6 +642,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
 
   <div class="tab-btn-row">
     <button class="tab-btn active" data-cat="gama-branca" data-tab="resumo">Resumo</button>
+    <button class="tab-btn" data-cat="gama-branca" data-tab="escaloes">Escalões de Preço</button>
     <button class="tab-btn" data-cat="gama-branca" data-tab="comp3">+3 Anos (DA6)</button>
     <button class="tab-btn" data-cat="gama-branca" data-tab="comp1">+1 Ano (DPV)</button>
     <button class="tab-btn" data-cat="gama-branca" data-tab="exclrp">⭐ Garanvip (DDR)</button>
@@ -615,6 +695,60 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row highlight"><span class="cov-icon">⏱️</span><div><strong>100€</strong> se reparação &gt; <strong>10 dias úteis</strong> <div class="cov-note">Melhor que DA6 que exige &gt;15 dias</div></div></div>
         <div class="cov-row highlight"><span class="cov-icon">🚚</span><div>Reinstalação incluída em caso de mudança</div></div>
         <div class="cov-row"><span class="cov-icon">💳</span><div>Pagamento mensal por débito direto em conta ou cartão · 1.ª fração na loja · renovação anual</div></div>
+      </div>
+    </div>
+
+    <!-- ESCALÕES DE PREÇO -->
+    <div id="gb-escaloes" class="tab-panel">
+      <p style="font-size:13px;color:#888;margin-bottom:16px;">Os escalões de preço de produto não são exactamente iguais entre as duas insígnias. Foram seleccionadas 5 categorias comparáveis para efeitos de análise.</p>
+
+      <div class="eyebrow">Garantia Extra +1 Ano</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-lose">27,99€ – 49,99€</td><td class="pt-win">20,00€</td><td class="pt-lose">Worten +8€</td></tr>
+            <tr><td>499,99€</td><td class="pt-lose">49,99€ – 79,99€</td><td class="pt-win">35,00€</td><td class="pt-lose">Worten +15€</td></tr>
+            <tr><td>749,99€</td><td class="pt-lose">74,99€ – 109,00€</td><td class="pt-win">40,00€</td><td class="pt-lose">Worten +35€</td></tr>
+            <tr><td>999,99€</td><td class="pt-lose">99,99€ – 129,99€</td><td class="pt-win">50,00€</td><td class="pt-lose">Worten +50€</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-lose">149,99€ – 199,99€</td><td class="pt-win">55,00€</td><td class="pt-lose">Worten +95€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eyebrow" style="margin-top:20px;">Garantia Extra +3 Anos</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-win">49,99€</td><td class="pt-lose">64,00€</td><td class="pt-win">Worten −14€</td></tr>
+            <tr><td>499,99€</td><td class="pt-win">79,99€</td><td class="pt-lose">89,00€</td><td class="pt-win">Worten −9€</td></tr>
+            <tr><td>749,99€</td><td class="pt-eq">109,00€</td><td class="pt-eq">109,00€</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>999,99€</td><td class="pt-lose">129,99€</td><td class="pt-win">124,00€</td><td class="pt-win">RP −6€</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-lose">199,99€</td><td class="pt-win">149,00€</td><td class="pt-win">RP −51€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box" style="margin-top:16px;">
+        <strong>+1 Ano:</strong> A RP é sempre mais barata em todos os escalões — a vantagem aumenta com o preço do produto, chegando a uma diferença de até +145€ no escalão dos ~1500€.<br><br>
+        <strong>+3 Anos:</strong> Nos escalões mais baixos (~249€ e ~500€) a Worten é ligeiramente mais barata. A partir dos ~750€ inverte-se: RP fica igual ou mais barata, com diferença a crescer até −51€ no topo.
       </div>
     </div>
 
@@ -752,6 +886,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
     <button class="tab-btn" data-cat="pequenos" data-tab="comp1">+1 Ano (DPV)</button>
     <button class="tab-btn" data-cat="pequenos" data-tab="dacc">Dano Acidental</button>
     <button class="tab-btn" data-cat="pequenos" data-tab="exclrp">⭐ Excl. RP</button>
+    <button class="tab-btn" data-cat="pequenos" data-tab="escaloes">Escalões de Preço</button>
   </div>
 
   <div class="tab-panels">
@@ -791,7 +926,8 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
 
       <div class="eyebrow" style="margin-top:24px;">Opções exclusivas RP</div>
 
-      <div class="prod-card" style="max-width:620px;margin-bottom:16px;">
+      <div class="cards-grid">
+      <div class="prod-card">
         <div class="prod-card-head rp">
           <div class="prod-card-ref">Ref. DPS · Prémio único · D&amp;G · Exclusivo Radio Popular</div>
           <div class="prod-card-name">Proteção Direta Substituição</div>
@@ -804,7 +940,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Apenas para produtos novos · prazo participação: 14 dias corridos</div></div>
       </div>
 
-      <div class="prod-card" style="max-width:620px;">
+      <div class="prod-card">
         <div class="prod-card-head rp">
           <div class="prod-card-ref">Ref. DDR · Subscrição mensal · D&amp;G · Exclusivo Radio Popular</div>
           <div class="prod-card-name">Mega Garantia Subscrição Garanvip</div>
@@ -818,6 +954,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row highlight"><span class="cov-icon">🚚</span><div>Reinstalação incluída em caso de mudança de casa</div></div>
         <div class="cov-row"><span class="cov-icon">💳</span><div>Pagamento mensal por débito direto em conta ou cartão · renovação anual</div></div>
       </div>
+      </div><!-- /cards-grid -->
     </div>
 
     <!-- DA6 vs WORTEN +3 ANOS -->
@@ -933,7 +1070,8 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <span class="brand-pill pill-rp">⭐ Exclusivos RP: DPS + DDR</span>
       </div>
 
-      <div class="prod-card" style="max-width:640px;margin-bottom:24px;">
+      <div class="cards-grid">
+      <div class="prod-card">
         <div class="prod-card-head rp">
           <div class="prod-card-ref">Ref. DPS · Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Radio Popular</div>
           <div class="prod-card-name">Proteção Direta Substituição</div>
@@ -953,7 +1091,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row"><span class="cov-icon">💡</span><div>Produto exclusivo RP — sem equivalente Worten</div></div>
       </div>
 
-      <div class="prod-card" style="max-width:640px;">
+      <div class="prod-card">
         <div class="prod-card-head rp">
           <div class="prod-card-ref">Ref. DDR · Subscrição mensal · D&amp;G Espanha · LPS PT 5002 · Exclusivo Radio Popular</div>
           <div class="prod-card-name">Mega Garantia Subscrição Garanvip</div>
@@ -976,6 +1114,61 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row"><span class="cov-icon">🔁</span><div>Subscrição anual · renovação automática</div></div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação de sinistro: 14 dias corridos</div></div>
       </div>
+      </div><!-- /cards-grid -->
+    </div>
+
+    <!-- ESCALÕES DE PREÇO -->
+    <div id="pd-escaloes" class="tab-panel">
+      <p style="font-size:13px;color:#888;margin-bottom:16px;">Os escalões de preço de produto não são exactamente iguais entre as duas insígnias. Foram seleccionadas 5 categorias comparáveis para efeitos de análise. Escalões idênticos aos da Gama Branca.</p>
+
+      <div class="eyebrow">Garantia Extra +1 Ano</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-lose">27,99€ – 49,99€</td><td class="pt-win">20,00€</td><td class="pt-lose">Worten +8€</td></tr>
+            <tr><td>499,99€</td><td class="pt-lose">49,99€ – 79,99€</td><td class="pt-win">35,00€</td><td class="pt-lose">Worten +15€</td></tr>
+            <tr><td>749,99€</td><td class="pt-lose">74,99€ – 109,00€</td><td class="pt-win">40,00€</td><td class="pt-lose">Worten +35€</td></tr>
+            <tr><td>999,99€</td><td class="pt-lose">99,99€ – 129,99€</td><td class="pt-win">50,00€</td><td class="pt-lose">Worten +50€</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-lose">149,99€ – 199,99€</td><td class="pt-win">55,00€</td><td class="pt-lose">Worten +95€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eyebrow" style="margin-top:20px;">Garantia Extra +3 Anos</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-win">49,99€</td><td class="pt-lose">64,00€</td><td class="pt-win">Worten −14€</td></tr>
+            <tr><td>499,99€</td><td class="pt-win">79,99€</td><td class="pt-lose">89,00€</td><td class="pt-win">Worten −9€</td></tr>
+            <tr><td>749,99€</td><td class="pt-eq">109,00€</td><td class="pt-eq">109,00€</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>999,99€</td><td class="pt-lose">129,99€</td><td class="pt-win">124,00€</td><td class="pt-win">RP −6€</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-lose">199,99€</td><td class="pt-win">149,00€</td><td class="pt-win">RP −51€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box" style="margin-top:16px;">
+        <strong>+1 Ano:</strong> A RP é sempre mais barata em todos os escalões — a vantagem aumenta com o preço do produto, chegando a uma diferença de até +145€ no escalão dos ~1500€.<br><br>
+        <strong>+3 Anos:</strong> Nos escalões mais baixos (~249€ e ~500€) a Worten é ligeiramente mais barata. A partir dos ~750€ inverte-se: RP fica igual ou mais barata, com diferença a crescer até −51€ no topo.
+      </div>
     </div>
 
   </div><!-- /tab-panels -->
@@ -996,6 +1189,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
     <button class="tab-btn" data-cat="informatica" data-tab="mensal">Mensal RP vs Worten</button>
     <button class="tab-btn" data-cat="informatica" data-tab="exclrp">⭐ Excl. RP</button>
     <button class="tab-btn" data-cat="informatica" data-tab="exclwo">Excl. Worten</button>
+    <button class="tab-btn" data-cat="informatica" data-tab="escaloes">Escalões de Preço</button>
   </div>
 
   <div class="tab-panels">
@@ -1042,12 +1236,12 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
             <tr>
               <td>Mensal — dano acidental + furto qualificado</td>
               <td>Protech (DDL) · <strong>€5,49/mês</strong></td>
-              <td>Resolve Flex (AS5) · <strong>€6,49/mês</strong></td>
+              <td>Resolve Flex (AS5) · <strong>€5,49/mês</strong></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="note-box">⚠️ Coberturas complementares: Protech RP cobre avarias (e desgaste) mas <strong>não</strong> cobre roubo; Worten cobre roubo mas <strong>não</strong> cobre avarias. RP é €1/mês mais barato e tem substituição automática após 3 avarias iguais.</div>
+      <div class="note-box">⚠️ Coberturas complementares: Protech RP cobre avarias (e desgaste) mas <strong>não</strong> cobre roubo; Worten cobre roubo mas <strong>não</strong> cobre avarias. Preço idêntico (€5,49/mês), mas RP tem substituição automática após 3 avarias iguais.</div>
 
       <div class="eyebrow" style="margin-top:24px;">Exclusivos RP</div>
       <div class="table-wrap">
@@ -1188,7 +1382,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
             <tr class="row-section"><td colspan="3">Dados gerais</td></tr>
             <tr><td class="td-label">Produto</td><td class="td-rp">Mega Garantia Subscrição Protech</td><td class="td-wo">Worten Resolve Flex</td></tr>
             <tr><td class="td-label">Seguradora</td><td class="td-rp">D&amp;G Espanha · LPS PT 5002</td><td class="td-wo">D&amp;G Espanha · LPS PT 5002</td></tr>
-            <tr><td class="td-label">Preço</td><td class="td-rp plus"><strong>€5,49/mês</strong> · (−€1/mês vs Worten)</td><td class="td-wo minus"><strong>€6,49/mês</strong></td></tr>
+            <tr><td class="td-label">Preço</td><td class="td-rp"><strong>€5,49/mês</strong></td><td class="td-wo"><strong>€5,49/mês</strong></td></tr>
             <tr><td class="td-label">Pagamento</td><td class="td-rp">1.ª fração na loja · restantes por débito direto em conta ou cartão</td><td class="td-wo">1.ª fração na loja · restantes por débito direto em conta ou cartão</td></tr>
             <tr class="row-section"><td colspan="3">⚡ Diferenças — coberturas</td></tr>
             <tr><td class="td-label">Avarias mecânicas/elétricas</td><td class="td-rp plus">✅ Incluídas <strong>após fim da garantia do fabricante</strong> (uso e desgaste incluídos)<div class="cov-note">Durante a garantia: apenas dano acidental e furto qualificado</div></td><td class="td-wo minus">❌ Excluídas (exceto se resultantes de dano acidental)</td></tr>
@@ -1216,8 +1410,9 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <span class="brand-pill pill-rp">⭐ Exclusivos RP: Protech · Informática Pro · Proteção Total 3 Anos</span>
       </div>
 
+      <div class="cards-grid">
       <!-- Protech -->
-      <div class="prod-card" style="max-width:640px;margin-bottom:24px;">
+      <div class="prod-card">
         <div class="prod-card-head rp">
           <div class="prod-card-ref">Ref. Protech · Subscrição mensal · D&amp;G Espanha · LPS PT 5002 · Exclusivo Radio Popular</div>
           <div class="prod-card-name">Protech</div>
@@ -1238,7 +1433,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
       </div>
 
       <!-- Informática Pro -->
-      <div class="prod-card" style="max-width:640px;margin-bottom:24px;">
+      <div class="prod-card">
         <div class="prod-card-head rp">
           <div class="prod-card-ref">Ref. D61 · Subscrição mensal · D&amp;G Espanha · LPS PT 5002 · Exclusivo Radio Popular</div>
           <div class="prod-card-name">Mega Garantia — Informática PRO</div>
@@ -1265,7 +1460,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
       </div>
 
       <!-- DP4 Proteção Total 3 Anos -->
-      <div class="prod-card" style="max-width:640px;">
+      <div class="prod-card">
         <div class="prod-card-head rp">
           <div class="prod-card-ref">Ref. DP4 · Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Radio Popular</div>
           <div class="prod-card-name">Mega Garantia — Proteção Total 3 Anos</div>
@@ -1283,6 +1478,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Apenas para produtos novos · duração 36 meses · não renovável</div></div>
       </div>
+      </div><!-- /cards-grid -->
     </div>
 
     <!-- EXCLUSIVOS WORTEN — DANO ACIDENTAL -->
@@ -1291,8 +1487,9 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <span class="brand-pill pill-wo">Exclusivos Worten: Dano Acidental 1 Ano (AR3) · Dano Acidental 2 Anos (AR4)</span>
       </div>
 
+      <div class="cards-grid">
       <!-- AR3 — 1 Ano -->
-      <div class="prod-card" style="max-width:640px;margin-bottom:24px;">
+      <div class="prod-card">
         <div class="prod-card-head wo">
           <div class="prod-card-ref">Ref. AR3 · Prémio único · D&amp;G Espanha · Exclusivo Worten</div>
           <div class="prod-card-name">Worten Resolve — Dano e Roubo 1 Ano</div>
@@ -1311,7 +1508,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
       </div>
 
       <!-- AR4 — 2 Anos -->
-      <div class="prod-card" style="max-width:640px;">
+      <div class="prod-card">
         <div class="prod-card-head wo">
           <div class="prod-card-ref">Ref. AR4 · Prémio único · D&amp;G Espanha · Exclusivo Worten</div>
           <div class="prod-card-name">Worten Resolve — Dano e Roubo 2 Anos</div>
@@ -1328,6 +1525,84 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row"><span class="cov-icon">💡</span><div>Idêntico ao AR3 mas com 24 meses de cobertura</div></div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
       </div>
+      </div><!-- /cards-grid -->
+    </div>
+
+    <!-- ESCALÕES DE PREÇO -->
+    <div id="it-escaloes" class="tab-panel">
+      <p style="font-size:13px;color:#888;margin-bottom:16px;">Os escalões de preço de produto não são exactamente iguais entre as duas insígnias. Foram seleccionadas 5 categorias comparáveis para efeitos de análise.</p>
+
+      <div class="eyebrow">Garantia Extra +1 Ano</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-eq">19,99€</td><td class="pt-eq">20,00€</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>499,99€</td><td class="pt-eq">34,99€</td><td class="pt-eq">35,00€</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>749,99€</td><td class="pt-lose">52,99€</td><td class="pt-win">40,00€</td><td class="pt-lose">Worten +13€</td></tr>
+            <tr><td>999,99€</td><td class="pt-lose">64,99€</td><td class="pt-win">50,00€</td><td class="pt-lose">Worten +15€</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-lose">99,99€</td><td class="pt-win">55,00€</td><td class="pt-lose">Worten +45€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eyebrow" style="margin-top:20px;">Garantia Extra +3 Anos</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-win">49,99€</td><td class="pt-lose">79,00€</td><td class="pt-win">Worten −29€</td></tr>
+            <tr><td>499,99€</td><td class="pt-win">74,99€</td><td class="pt-lose">129,00€</td><td class="pt-win">Worten −54€</td></tr>
+            <tr><td>749,99€</td><td class="pt-win">104,99€</td><td class="pt-lose">154,00€</td><td class="pt-win">Worten −49€</td></tr>
+            <tr><td>999,99€</td><td class="pt-win">124,99€</td><td class="pt-lose">184,00€</td><td class="pt-win">Worten −59€</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-win">174,99€</td><td class="pt-lose">189,00€</td><td class="pt-win">Worten −14€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eyebrow" style="margin-top:20px;">Seguro Mensal</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-eq">3,49€/mês</td><td class="pt-eq">3,49€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>499,99€</td><td class="pt-eq">3,99€/mês</td><td class="pt-eq">3,99€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>749,99€</td><td class="pt-eq">5,49€/mês</td><td class="pt-eq">5,49€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>999,99€</td><td class="pt-eq">6,49€/mês</td><td class="pt-eq">6,49€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-win">8,49€/mês</td><td class="pt-lose">8,99€/mês</td><td class="pt-win">Worten −0,50€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box" style="margin-top:16px;">
+        <strong>+1 Ano:</strong> Nos escalões baixos (~250€ e ~500€) os preços são praticamente idênticos. A partir dos ~750€, a RP é significativamente mais barata, com diferença a crescer até +45€ no escalão de ~1500€.<br><br>
+        <strong>+3 Anos:</strong> A Worten é mais barata em todos os escalões, com a maior vantagem nos escalões intermédios (até −59€ em ~1000€). No escalão mais alto (~1500€) a diferença reduz-se a apenas −14€.<br><br>
+        <strong>Mensal:</strong> Os preços são idênticos em quase todos os escalões. Apenas no topo (~1500€) a Worten é ligeiramente mais barata (−0,50€/mês).
+      </div>
     </div>
 
   </div><!-- /tab-panels -->
@@ -1343,14 +1618,17 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
   <div class="tab-btn-row">
     <button class="tab-btn active" data-cat="smartphones" data-tab="resumo">Resumo</button>
     <button class="tab-btn" data-cat="smartphones" data-tab="comp">Premium RP vs Worten</button>
+    <button class="tab-btn" data-cat="smartphones" data-tab="dacc1">Dano Acidental 1 Ano</button>
     <button class="tab-btn" data-cat="smartphones" data-tab="exclrp">⭐ Excl. RP</button>
+    <button class="tab-btn" data-cat="smartphones" data-tab="exclwo">Excl. Worten</button>
+    <button class="tab-btn" data-cat="smartphones" data-tab="escaloes">Escalões de Preço</button>
   </div>
 
   <div class="tab-panels">
 
     <!-- RESUMO -->
     <div id="sm-resumo" class="tab-panel active">
-      <div class="eyebrow">Opções comparáveis — Subscrição Premium</div>
+      <div class="eyebrow">Opções comparáveis</div>
       <div class="table-wrap">
         <table class="comp-simple">
           <thead>
@@ -1364,12 +1642,17 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
             <tr>
               <td>Subscrição Premium mensal</td>
               <td>Premium RP · <strong>€18,99/mês</strong></td>
-              <td>Premium Worten · <strong>€21,49/mês</strong></td>
+              <td>Premium Worten · <strong>€17,49/mês</strong></td>
+            </tr>
+            <tr>
+              <td>Dano Acidental 1 Ano · prémio único</td>
+              <td>Mega Garantia Smartphone Plus · <strong>€169,00</strong></td>
+              <td>Worten Resolve Telemóvel 1 Ano · <strong>€159,99</strong></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="note-box">ℹ️ Ambos os produtos são segurados pela D&amp;G Espanha com coberturas praticamente idênticas. A RP é €2,50/mês mais barata. Ambos têm co-pagamento de 15% (máx. €150) e incluem serviços digitais. Worten exclui explicitamente "furto simples" (perda ou furto); RP exclui só "perda".</div>
+      <div class="note-box">ℹ️ No Premium mensal, a Worten é €1,50/mês mais barata mas ambos têm coberturas praticamente idênticas. No Dano Acidental 1 Ano, a Worten também é mais barata (−€9) e tem co-pagamento máximo de €60 vs €100 da RP, e menciona explicitamente líquidos e humidade.</div>
 
       <div class="eyebrow" style="margin-top:24px;">Exclusivos RP</div>
       <div class="table-wrap">
@@ -1383,15 +1666,25 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
               <td>Dano acidental + roubo + furto qualificado · co-pag. 10% · repara ou substitui</td>
               <td><strong>€15,99/mês</strong></td>
             </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eyebrow" style="margin-top:24px;">Exclusivos Worten</div>
+      <div class="table-wrap">
+        <table class="comp-simple">
+          <thead>
+            <tr><th>Produto</th><th>Cobertura</th><th>Preço</th></tr>
+          </thead>
+          <tbody>
             <tr>
-              <td>Dano Acidental 1 Ano</td>
-              <td>Dano acidental + roubo + furto qualificado · co-pag. 10% · <strong>1 sinistro</strong></td>
-              <td><strong>€234,00</strong> único</td>
+              <td>Dano Acidental 2 Anos</td>
+              <td>Dano acidental + roubo + furto qualificado · co-pag. 10% (máx. €60) · 1 sinistro/ano</td>
+              <td><strong>€249,99</strong> único</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="note-box">⚠️ O Dano Acidental 1 Ano (€234) cobre apenas <strong>um único sinistro</strong> durante a vigência. Após a primeira ocorrência, a apólice é cancelada. Não inclui serviços digitais.</div>
     </div>
 
     <!-- PREMIUM RP vs PREMIUM WORTEN -->
@@ -1407,12 +1700,12 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
           <tbody>
             <tr class="row-section"><td colspan="3">Dados gerais</td></tr>
             <tr><td class="td-label">Seguradora</td><td class="td-rp">D&amp;G Espanha · LPS PT 5002</td><td class="td-wo">D&amp;G Espanha · LPS PT 5002</td></tr>
-            <tr><td class="td-label">Preço</td><td class="td-rp plus"><strong>€18,99/mês</strong> · renovação anual</td><td class="td-wo minus"><strong>€21,49/mês</strong> · renovação anual · (+€2,50/mês vs RP)</td></tr>
+            <tr><td class="td-label">Preço</td><td class="td-rp minus"><strong>€18,99/mês</strong> · renovação anual · (+€1,50/mês vs Worten)</td><td class="td-wo plus"><strong>€17,49/mês</strong> · renovação anual</td></tr>
             <tr><td class="td-label">Objetivo principal</td><td class="td-rp">Substituição direta</td><td class="td-wo">Substituição direta</td></tr>
             <tr><td class="td-label">Tipo de substituição</td><td class="td-rp muted">Produto idêntico/similar · pode ser recondicionado</td><td class="td-wo muted">Produto idêntico/similar · pode ser recondicionado</td></tr>
             <tr><td class="td-label">Co-pagamento por sinistro</td><td class="td-rp muted">15% do valor de compra · máximo €150</td><td class="td-wo muted">15% do valor de compra · máximo €150</td></tr>
             <tr class="row-section"><td colspan="3">⚡ Diferenças</td></tr>
-            <tr><td class="td-label">Preço mensal</td><td class="td-rp plus">✅ €18,99 — €30/ano mais barato</td><td class="td-wo minus">❌ €21,49 — sem vantagem face à RP</td></tr>
+            <tr><td class="td-label">Preço mensal</td><td class="td-rp minus">❌ €18,99 — €18/ano mais caro</td><td class="td-wo plus">✅ €17,49 — €1,50/mês mais barato</td></tr>
             <tr><td class="td-label">Líquidos e humidade</td><td class="td-rp muted">Incluídos pela definição de "Dano Acidental" · não mencionados explicitamente no DIPS</td><td class="td-wo plus">✅ Explicitamente mencionados: "inclusive os danos decorrentes ou causados por líquidos e humidade"</td></tr>
             <tr><td class="td-label">Furto simples (pickpocket)</td><td class="td-rp muted">Não coberto · apenas "Perda" excluída explicitamente</td><td class="td-wo minus">❌ "Perda ou Furto" excluídos explicitamente — furto simples excluído sem ambiguidade</td></tr>
             <tr class="row-section"><td colspan="3">Coberturas idênticas</td></tr>
@@ -1433,14 +1726,49 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
       </div>
     </div>
 
+    <!-- DANO ACIDENTAL 1 ANO — RP vs WORTEN -->
+    <div id="sm-dacc1" class="tab-panel">
+      <div class="brand-row">
+        <span class="brand-pill pill-rp">🔵 RP: Mega Garantia Smartphone Plus (PS5)</span>
+        <span class="brand-pill pill-wo">🔴 Worten: Worten Resolve Telemóvel 1 Ano (AT2)</span>
+      </div>
+      <div class="table-wrap">
+        <table class="comp-table">
+          <thead><tr><th class="col-label"></th><th class="col-rp">🔵 RP — PS5</th><th class="col-wo">🔴 Worten — AT2</th></tr></thead>
+          <tbody>
+            <tr class="row-section"><td colspan="3">Dados gerais</td></tr>
+            <tr><td class="td-label">Seguradora</td><td class="td-rp">D&amp;G Espanha · LPS PT 5002</td><td class="td-wo">D&amp;G Espanha · LPS PT 5002</td></tr>
+            <tr><td class="td-label">Preço</td><td class="td-rp minus"><strong>€169,00</strong> · prémio único</td><td class="td-wo plus"><strong>€159,99</strong> · prémio único · (−€9 vs RP)</td></tr>
+            <tr><td class="td-label">Duração</td><td class="td-rp">12 meses</td><td class="td-wo">12 meses</td></tr>
+            <tr><td class="td-label">Equipamentos usados</td><td class="td-rp minus">❌ Apenas equipamentos novos — explicitamente excluídos os usados</td><td class="td-wo plus">✅ Não mencionada restrição — pode cobrir usados</td></tr>
+            <tr class="row-section"><td colspan="3">⚡ Diferenças</td></tr>
+            <tr><td class="td-label">Líquidos e humidade</td><td class="td-rp muted">Não mencionados explicitamente no DIPS</td><td class="td-wo plus">✅ Explicitamente cobertos: "inclusive os danos decorrentes ou causados por líquidos e humidade"</td></tr>
+            <tr><td class="td-label">Co-pagamento máximo</td><td class="td-rp minus">Máximo <strong>€100</strong> por sinistro</td><td class="td-wo plus">Máximo <strong>€60</strong> por sinistro — franquia mais baixa</td></tr>
+            <tr class="row-section"><td colspan="3">Igual nas duas insígnias</td></tr>
+            <tr><td class="td-label">Dano acidental</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Roubo (com violência)</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Furto Qualificado</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Peças + mão-de-obra + transporte</td><td class="td-rp plus">✅ Incluídos</td><td class="td-wo plus">✅ Incluídos</td></tr>
+            <tr><td class="td-label">Co-pagamento por sinistro</td><td class="td-rp muted">10% do valor de compra · máx. €100</td><td class="td-wo muted">10% do valor de compra · máx. €60</td></tr>
+            <tr><td class="td-label">Limite de sinistros</td><td class="td-rp muted">1 sinistro em 12 meses · apólice cancelada após substituição</td><td class="td-wo muted">1 sinistro em 12 meses · apólice cancelada após substituição</td></tr>
+            <tr><td class="td-label">Perda · dano estético · uso prof.</td><td class="td-rp minus">❌ Excluídos</td><td class="td-wo minus">❌ Excluídos</td></tr>
+            <tr><td class="td-label">Acessórios e consumíveis</td><td class="td-rp minus">❌ Excluídos</td><td class="td-wo minus">❌ Excluídos</td></tr>
+            <tr><td class="td-label">Cancelamento 30 dias</td><td class="td-rp plus">✅ Reembolso total</td><td class="td-wo plus">✅ Reembolso total</td></tr>
+            <tr><td class="td-label">Cobertura geográfica</td><td class="td-rp">Mundial · reparação/substituição em Portugal</td><td class="td-wo">Mundial · reparação/substituição em Portugal</td></tr>
+            <tr><td class="td-label">Prazo participação</td><td class="td-rp">14 dias corridos</td><td class="td-wo">14 dias corridos</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">ℹ️ Worten é €9 mais barata e tem co-pagamento máximo de €60 (vs €100 da RP) — vantagem clara se o smartphone for de valor elevado. Worten cobre explicitamente líquidos e humidade; RP não menciona. RP só aceita equipamentos novos.</div>
+    </div>
+
     <!-- EXCLUSIVOS RP -->
     <div id="sm-exclrp" class="tab-panel">
       <div class="brand-row">
-        <span class="brand-pill pill-rp">⭐ Exclusivos RP: Mensal RP + Dano Acidental 1 Ano</span>
+        <span class="brand-pill pill-rp">⭐ Exclusivo RP: Mensal RP</span>
       </div>
 
-      <!-- Mensal RP básico -->
-      <div class="prod-card" style="max-width:640px;margin-bottom:24px;">
+      <div class="prod-card" style="max-width:640px;">
         <div class="prod-card-head rp">
           <div class="prod-card-ref">Subscrição mensal · D&amp;G Espanha · LPS PT 5002 · Exclusivo Radio Popular</div>
           <div class="prod-card-name">Mensal RP</div>
@@ -1460,25 +1788,156 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row"><span class="cov-icon">💳</span><div>Mensal por débito direto em conta ou cartão · 1.ª fração na loja · renovação anual</div></div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
       </div>
+    </div>
 
-      <!-- Dano Acidental 1 Ano -->
+    <!-- EXCLUSIVOS WORTEN -->
+    <div id="sm-exclwo" class="tab-panel">
+      <div class="brand-row">
+        <span class="brand-pill pill-wo">Exclusivo Worten: Dano Acidental 2 Anos (AT3)</span>
+      </div>
+
       <div class="prod-card" style="max-width:640px;">
-        <div class="prod-card-head rp">
-          <div class="prod-card-ref">Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Radio Popular</div>
-          <div class="prod-card-name">Dano Acidental 1 Ano</div>
-          <div class="prod-card-price">€234,00<span style="font-size:15px;font-weight:400;opacity:.85"> prémio único</span></div>
-          <div class="prod-card-desc">Dano acidental + roubo + furto qualificado · co-pag. 10% · 1 sinistro</div>
+        <div class="prod-card-head wo">
+          <div class="prod-card-ref">Ref. AT3 · Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Worten</div>
+          <div class="prod-card-name">Dano Acidental 2 Anos</div>
+          <div class="prod-card-price">€249,99<span style="font-size:15px;font-weight:400;opacity:.85"> prémio único</span></div>
+          <div class="prod-card-desc">Dano acidental + roubo + furto qualificado · co-pag. 10% (máx. €60) · 24 meses</div>
         </div>
-        <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong> (incluindo líquidos)</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong>, inclusive líquidos e humidade (mencionados explicitamente)</div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div>Roubo (com violência) e Furto Qualificado</div></div>
         <div class="cov-row"><span class="cov-icon plus">✅</span><div>Peças, mão-de-obra, transporte incluídos · repara ou substitui</div></div>
-        <div class="cov-row highlight"><span class="cov-icon">⚠️</span><div><strong>Apenas 1 sinistro indemnizado</strong> durante a vigência — após a primeira ocorrência, a apólice é cancelada</div></div>
-        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Serviços digitais não incluídos (ao contrário dos produtos mensais)</div></div>
+        <div class="cov-row highlight"><span class="cov-icon">🔄</span><div><strong>1 sinistro indemnizado por cada 12 meses</strong> — até 2 sinistros ao longo dos 24 meses de cobertura</div></div>
+        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Serviços digitais não incluídos</div></div>
         <div class="cov-row"><span class="cov-icon minus">❌</span><div>Perda do equipamento · dano estético · uso profissional</div></div>
         <div class="cov-row"><span class="cov-icon minus">❌</span><div>Acessórios e consumíveis excluídos</div></div>
         <div style="padding:8px 20px 4px;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#888;background:#f5f5f7;border-top:1px solid #e5e5ea;">Co-pagamento</div>
-        <div class="cov-row"><span class="cov-icon">⚠️</span><div>Co-pagamento de <strong>10%</strong> do valor de compra por sinistro · máximo <strong>€100</strong><div class="cov-note">Smartphone €999: co-pagamento de ~€99,90</div></div></div>
-        <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos · duração 12 meses · não renovável</div></div>
+        <div class="cov-row"><span class="cov-icon">⚠️</span><div>Co-pagamento de <strong>10%</strong> do valor de compra por sinistro · máximo <strong>€60</strong><div class="cov-note">Smartphone €999: co-pagamento de ~€60 (limitado ao máximo)</div></div></div>
+        <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos · duração 24 meses · não renovável</div></div>
+      </div>
+    </div>
+
+    <!-- ESCALÕES DE PREÇO -->
+    <div id="sm-escaloes" class="tab-panel">
+      <p style="font-size:13px;color:#888;margin-bottom:16px;">Os escalões de preço da RP e da Worten não são directamente comparáveis nesta categoria — a Worten tem escalões muito mais granulares e diferentes modalidades (Standard, Premium, Apple Premium). Apresentam-se em separado.</p>
+
+      <div class="eyebrow">🔵 Rádio Popular — Escalões comparáveis</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:30%"><col style="width:35%"><col style="width:35%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#1565C0;">Premium (mensal)</th>
+              <th style="background:#1565C0;">Dano Acidental 1 Ano</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td>6,99€/mês</td><td>59,00€</td></tr>
+            <tr><td>499,99€</td><td>13,99€/mês</td><td>119,00€</td></tr>
+            <tr><td>749,99€</td><td>15,99€/mês</td><td>139,00€</td></tr>
+            <tr><td>999,99€</td><td>16,99€/mês</td><td>169,00€</td></tr>
+            <tr><td>1.499,99€</td><td>18,99€/mês</td><td>234,00€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eyebrow" style="margin-top:28px;">🔴 Worten — Lista completa de modalidades (mensal)</div>
+      <p style="font-size:12px;color:#888;margin-bottom:12px;">Fonte: lista de produtos Worten · seguradora MDS · todos os preços são mensais por débito directo</p>
+
+      <div class="eyebrow" style="margin-top:16px;font-size:12px;">Seg Flex Smartphone (Standard)</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:50%"><col style="width:50%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">Preço/mês</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>0 – 100,00€</td><td>2,99€</td></tr>
+            <tr><td>100 – 149,99€</td><td>4,99€</td></tr>
+            <tr><td>150 – 199,99€</td><td>5,49€</td></tr>
+            <tr><td>200 – 249,99€</td><td>5,99€</td></tr>
+            <tr><td>250 – 299,99€</td><td>6,99€</td></tr>
+            <tr><td>300 – 349,99€</td><td>7,49€</td></tr>
+            <tr><td>350 – 399,99€</td><td>7,99€</td></tr>
+            <tr><td>400 – 449,99€</td><td>8,99€</td></tr>
+            <tr><td>450 – 499,99€</td><td>9,99€</td></tr>
+            <tr><td>500 – 549,99€</td><td>10,99€</td></tr>
+            <tr><td>550 – 599,99€</td><td>11,99€</td></tr>
+            <tr><td>600 – 699,99€</td><td>13,99€</td></tr>
+            <tr><td>700 – 799,99€</td><td>14,49€</td></tr>
+            <tr><td>800 – 999,99€</td><td>15,49€</td></tr>
+            <tr><td>1.000 – 1.199,99€</td><td>16,99€</td></tr>
+            <tr><td>1.200 – 1.499,99€</td><td>17,99€</td></tr>
+            <tr><td>1.500 – 1.799,99€</td><td>19,99€</td></tr>
+            <tr><td>1.800 – 1.999,99€</td><td>22,49€</td></tr>
+            <tr><td>2.000 – 2.499,99€</td><td>26,49€</td></tr>
+            <tr><td>2.500 – 3.000€</td><td>27,99€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eyebrow" style="margin-top:16px;font-size:12px;">Seg Flex Premium Smartphone</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:50%"><col style="width:50%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">Preço/mês</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>400 – 449,99€</td><td>10,99€</td></tr>
+            <tr><td>450 – 499,99€</td><td>11,99€</td></tr>
+            <tr><td>500 – 549,99€</td><td>12,99€</td></tr>
+            <tr><td>550 – 599,99€</td><td>13,99€</td></tr>
+            <tr><td>600 – 699,99€</td><td>15,99€</td></tr>
+            <tr><td>700 – 799,99€</td><td>16,49€</td></tr>
+            <tr><td>800 – 999,99€</td><td>17,49€</td></tr>
+            <tr><td>1.000 – 1.199,99€</td><td>18,99€</td></tr>
+            <tr><td>1.200 – 1.499,99€</td><td>19,99€</td></tr>
+            <tr><td>1.500 – 1.799,99€</td><td>21,99€</td></tr>
+            <tr><td>1.800 – 1.999,99€</td><td>24,49€</td></tr>
+            <tr><td>2.000 – 2.499,99€</td><td>28,49€</td></tr>
+            <tr><td>2.500 – 3.000€</td><td>30,99€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eyebrow" style="margin-top:16px;font-size:12px;">Seg Flex Apple Premium Smartphone</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:50%"><col style="width:50%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">Preço/mês</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>400 – 449,99€</td><td>11,49€</td></tr>
+            <tr><td>450 – 499,99€</td><td>12,49€</td></tr>
+            <tr><td>500 – 549,99€</td><td>13,49€</td></tr>
+            <tr><td>550 – 599,99€</td><td>14,49€</td></tr>
+            <tr><td>600 – 699,99€</td><td>16,49€</td></tr>
+            <tr><td>700 – 799,99€</td><td>16,99€</td></tr>
+            <tr><td>800 – 999,99€</td><td>18,49€</td></tr>
+            <tr><td>1.000 – 1.199,99€</td><td>19,99€</td></tr>
+            <tr><td>1.200 – 1.499,99€</td><td>21,49€</td></tr>
+            <tr><td>1.500 – 1.799,99€</td><td>23,49€</td></tr>
+            <tr><td>1.800 – 1.999,99€</td><td>25,99€</td></tr>
+            <tr><td>2.000 – 2.499,99€</td><td>29,99€</td></tr>
+            <tr><td>2.500 – 3.000€</td><td>33,99€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box" style="margin-top:16px;">
+        <strong>Nota:</strong> A Worten dispõe ainda de variantes adicionais: Marketplace, Açores, Recondicionados, B2B e Promo Smartphone+Áudio — com preços idênticos ou ligeiramente diferentes. Os escalões acima referem-se aos produtos standard de loja.<br><br>
+        Os escalões da RP cobrem faixas mais largas (5 níveis), enquanto a Worten utiliza escalões de ~€50 a ~€200, tornando a comparação directa impraticável.
       </div>
     </div>
 
@@ -1490,7 +1949,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
   <div class="page-title">
     <div class="meta">Categoria</div>
     <h2>Fotografia</h2>
-    <div class="badge">📷 Câmaras, objetivas e acessórios</div>
+    <div class="badge">💶 Exemplo: Reflex €499,99</div>
   </div>
 
   <div class="tab-btn-row">
@@ -1498,6 +1957,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
     <button class="tab-btn" data-cat="fotografia" data-tab="comp">Mensal RP vs Worten</button>
     <button class="tab-btn" data-cat="fotografia" data-tab="exclwo">⭐ Excl. Worten</button>
     <button class="tab-btn" data-cat="fotografia" data-tab="exclrp">⭐ Excl. RP</button>
+    <button class="tab-btn" data-cat="fotografia" data-tab="escaloes">Escalões de Preço</button>
   </div>
 
   <div class="tab-panels">
@@ -1611,10 +2071,10 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
       </div>
       <div class="note-box" style="margin-bottom:20px;">ℹ️ Ambos os produtos Worten têm coberturas idênticas — dano acidental (incl. líquidos) + roubo + furto qualificado. A diferença é apenas a duração e o preço.</div>
 
-      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+      <div class="cards-grid">
 
         <!-- 1 Ano Worten -->
-        <div class="prod-card" style="flex:1;min-width:280px;max-width:400px;">
+        <div class="prod-card">
           <div class="prod-card-head wo">
             <div class="prod-card-ref">Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Worten</div>
             <div class="prod-card-name">Dano e Roubo 1 Ano</div>
@@ -1631,7 +2091,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         </div>
 
         <!-- 2 Anos Worten -->
-        <div class="prod-card" style="flex:1;min-width:280px;max-width:400px;">
+        <div class="prod-card">
           <div class="prod-card-head wo">
             <div class="prod-card-ref">Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Worten</div>
             <div class="prod-card-name">Dano e Roubo 2 Anos</div>
@@ -1657,8 +2117,9 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <span class="brand-pill pill-rp">⭐ Exclusivos RP: Proteção Total 3 Anos + Mais 1 Ano</span>
       </div>
 
+      <div class="cards-grid">
       <!-- Proteção Total 3 Anos -->
-      <div class="prod-card" style="max-width:640px;margin-bottom:24px;">
+      <div class="prod-card">
         <div class="prod-card-head rp">
           <div class="prod-card-ref">Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Radio Popular · DP4</div>
           <div class="prod-card-name">Proteção Total 3 Anos</div>
@@ -1679,7 +2140,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
       </div>
 
       <!-- Mais 1 Ano -->
-      <div class="prod-card" style="max-width:640px;">
+      <div class="prod-card">
         <div class="prod-card-head rp">
           <div class="prod-card-ref">Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Radio Popular · DPV</div>
           <div class="prod-card-name">Mais 1 Ano (Ampliação de Garantia)</div>
@@ -1695,6 +2156,38 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row"><span class="cov-icon minus">❌</span><div>Dano estético excluído</div></div>
         <div class="cov-row"><span class="cov-icon">💳</span><div>Prémio único · não renovável</div></div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
+      </div>
+      </div><!-- /cards-grid -->
+    </div>
+
+    <!-- ESCALÕES DE PREÇO -->
+    <div id="fo-escaloes" class="tab-panel">
+      <p style="font-size:13px;color:#888;margin-bottom:16px;">Na fotografia existe apenas a modalidade de seguro mensal. Os preços são idênticos entre as duas insígnias em quase todos os escalões.</p>
+
+      <div class="eyebrow">Seguro Mensal</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-eq">2,99€/mês</td><td class="pt-eq">2,99€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>499,99€</td><td class="pt-eq">3,99€/mês</td><td class="pt-eq">3,99€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>749,99€</td><td class="pt-eq">4,99€/mês</td><td class="pt-eq">4,99€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>999,99€</td><td class="pt-eq">6,49€/mês</td><td class="pt-eq">6,49€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-eq">6,49€/mês</td><td class="pt-eq">6,49€/mês</td><td class="pt-eq">Igual</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box" style="margin-top:16px;">
+        <strong>Mensal:</strong> Os preços são exactamente iguais em todos os escalões. Nos dois escalões superiores (~1000€ e ~1500€) o preço mensal é o mesmo (6,49€/mês), sugerindo um tecto de preço para esta categoria.
       </div>
     </div>
 
@@ -1806,8 +2299,9 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <span class="brand-pill pill-wo">Exclusivos Worten: Dano e Roubo 1 Ano (AR3) · Dano e Roubo 2 Anos (AR4)</span>
       </div>
 
+      <div class="cards-grid">
       <!-- AR3 — 1 Ano -->
-      <div class="prod-card" style="max-width:640px;margin-bottom:24px;">
+      <div class="prod-card">
         <div class="prod-card-head wo">
           <div class="prod-card-ref">Ref. AR3 · Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Worten</div>
           <div class="prod-card-name">Worten Resolve — Dano e Roubo 1 Ano</div>
@@ -1825,7 +2319,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
       </div>
 
       <!-- AR4 — 2 Anos -->
-      <div class="prod-card" style="max-width:640px;">
+      <div class="prod-card">
         <div class="prod-card-head wo">
           <div class="prod-card-ref">Ref. AR4 · Prémio único · D&amp;G Espanha · LPS PT 5002 · Exclusivo Worten</div>
           <div class="prod-card-name">Worten Resolve — Dano e Roubo 2 Anos</div>
@@ -1841,6 +2335,7 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
         <div class="cov-row"><span class="cov-icon">💡</span><div>Idêntico ao AR3 mas com 24 meses de cobertura</div></div>
         <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
       </div>
+      </div><!-- /cards-grid -->
     </div>
 
   </div><!-- /tab-panels -->
@@ -1857,7 +2352,10 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
   <div class="tab-btn-row">
     <button class="tab-btn active" data-cat="smartwatch" data-tab="resumo">Resumo</button>
     <button class="tab-btn" data-cat="smartwatch" data-tab="mensal">Mensal RP vs Worten</button>
+    <button class="tab-btn" data-cat="smartwatch" data-tab="dacc1">Dano Acidental 1 Ano</button>
     <button class="tab-btn" data-cat="smartwatch" data-tab="exclrp">⭐ Excl. RP</button>
+    <button class="tab-btn" data-cat="smartwatch" data-tab="exclwo">Excl. Worten</button>
+    <button class="tab-btn" data-cat="smartwatch" data-tab="escaloes">Escalões de Preço</button>
   </div>
 
   <div class="tab-panels">
@@ -1885,22 +2383,39 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
       </div>
       <div class="note-box">⚠️ Mesmo preço, coberturas complementares: ProTech RP cobre dano acidental + furto qualificado desde o início, e passa a cobrir também <strong>avarias (incl. desgaste) após o fim da garantia do fabricante</strong>; Worten cobre roubo mas nunca cobre avarias. ProTech tem substituição automática após 3 avarias iguais em 12 meses.</div>
 
-      <div class="eyebrow" style="margin-top:24px;">Exclusivos RP — Prémio Único</div>
+      <div class="eyebrow" style="margin-top:24px;">Dano Acidental 1 Ano — comparável</div>
       <div class="table-wrap">
         <table class="comp-simple">
           <thead>
-            <tr><th>Produto</th><th>Cobertura</th><th>Preço</th></tr>
+            <tr><th>Produto</th><th>🔵 Rádio Popular</th><th>🔴 Worten</th></tr>
           </thead>
           <tbody>
             <tr>
-              <td>Dano Acidental +1 Ano</td>
-              <td>Dano acidental (incluindo quebra de ecrã)</td>
+              <td>Dano Acidental 1 Ano</td>
               <td><strong>€59,00</strong> único</td>
+              <td><strong>€79,99</strong> único</td>
             </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">ℹ️ Ambas cobrem dano acidental por 12 meses. RP é €21 mais barata no escalão de ~300€. Disponibilidade varia por escalão de preço — ver tab "Escalões de Preço".</div>
+
+      <div class="eyebrow" style="margin-top:24px;">Exclusivos</div>
+      <div class="table-wrap">
+        <table class="comp-simple">
+          <thead>
+            <tr><th>Produto</th><th>Insígnia</th><th>Preço</th></tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Quebra de Ecrã +1 Ano</td>
-              <td>Quebra/fissura do ecrã</td>
+              <td>🔵 Excl. RP</td>
               <td><strong>€44,00</strong> único</td>
+            </tr>
+            <tr>
+              <td>Dano Acidental 2 Anos</td>
+              <td>🔴 Excl. Worten</td>
+              <td>Prémio único (ver tab)</td>
             </tr>
           </tbody>
         </table>
@@ -1941,28 +2456,37 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
       </div>
     </div>
 
+    <!-- DANO ACIDENTAL 1 ANO — COMPARÁVEL -->
+    <div id="sw-dacc1" class="tab-panel">
+      <div class="brand-row">
+        <span class="brand-pill pill-rp">🔵 RP: Dano Acidental +1 Ano</span>
+        <span class="brand-pill pill-wo">🔴 Worten: Dano Acidental 1 Ano</span>
+      </div>
+      <div class="table-wrap">
+        <table class="comp-table">
+          <thead><tr><th class="col-label"></th><th class="col-rp">🔵 RP — Dano Acidental +1 Ano</th><th class="col-wo">🔴 Worten — Dano Acidental 1 Ano</th></tr></thead>
+          <tbody>
+            <tr class="row-section"><td colspan="3">Dados gerais</td></tr>
+            <tr><td class="td-label">Tipo</td><td class="td-rp">Prémio único · 12 meses</td><td class="td-wo">Prémio único · 12 meses</td></tr>
+            <tr><td class="td-label">Preço (escalão 299,99€)</td><td class="td-rp"><strong>€79,00</strong></td><td class="td-wo"><strong>€79,99</strong></td></tr>
+            <tr class="row-section"><td colspan="3">Coberturas</td></tr>
+            <tr><td class="td-label">Dano acidental</td><td class="td-rp plus">✅ Incluído (incl. quedas, impactos, quebra de ecrã)</td><td class="td-wo plus">✅ Incluído (incl. líquidos e humidade)</td></tr>
+            <tr><td class="td-label">Peças, mão-de-obra, transporte</td><td class="td-rp plus">✅ Incluídos</td><td class="td-wo plus">✅ Incluídos</td></tr>
+            <tr><td class="td-label">Avarias mecânicas/elétricas</td><td class="td-rp minus">❌ Excluídas</td><td class="td-wo minus">❌ Excluídas</td></tr>
+            <tr><td class="td-label">Roubo e furto</td><td class="td-rp minus">❌ Excluídos</td><td class="td-wo minus">❌ Excluídos</td></tr>
+            <tr><td class="td-label">Prazo participação</td><td class="td-rp">14 dias corridos</td><td class="td-wo">14 dias corridos</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">ℹ️ Coberturas praticamente idênticas. No escalão ~300€ os preços são quase iguais (RP €79 vs Worten €79,99). A disponibilidade por escalão varia — consultar tab "Escalões de Preço".</div>
+    </div>
+
     <!-- EXCLUSIVOS RP -->
     <div id="sw-exclrp" class="tab-panel">
       <div class="brand-row">
-        <span class="brand-pill pill-rp">Exclusivos RP: Dano Acidental +1 Ano · Quebra de Ecrã +1 Ano</span>
+        <span class="brand-pill pill-rp">Exclusivo RP: Quebra de Ecrã +1 Ano</span>
       </div>
 
-      <!-- Dano Acidental +1 Ano -->
-      <div class="prod-card" style="max-width:640px;margin-bottom:24px;">
-        <div class="prod-card-head rp">
-          <div class="prod-card-ref">Prémio único · Exclusivo Rádio Popular</div>
-          <div class="prod-card-name">RP — Dano Acidental +1 Ano</div>
-          <div class="prod-card-price">€59,00<span style="font-size:15px;font-weight:400;opacity:.85"> prémio único</span></div>
-          <div class="prod-card-desc">Dano acidental (incluindo quebra de ecrã) — 12 meses</div>
-        </div>
-        <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong> (incluindo líquidos, quedas e quebra de ecrã)</div></div>
-        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Peças, mão-de-obra, transporte incluídos</div></div>
-        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Avarias mecânicas/elétricas excluídas</div></div>
-        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Roubo e furto excluídos</div></div>
-        <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
-      </div>
-
-      <!-- Quebra de Ecrã +1 Ano -->
       <div class="prod-card" style="max-width:640px;">
         <div class="prod-card-head rp">
           <div class="prod-card-ref">Prémio único · Exclusivo Rádio Popular</div>
@@ -1979,8 +2503,195 @@ small  { font-size: 11.5px; color: #888; display: block; margin-top: 2px; }
       </div>
     </div>
 
+    <!-- EXCLUSIVOS WORTEN -->
+    <div id="sw-exclwo" class="tab-panel">
+      <div class="brand-row">
+        <span class="brand-pill pill-wo">Exclusivo Worten: Dano Acidental 2 Anos</span>
+      </div>
+
+      <div class="prod-card" style="max-width:640px;">
+        <div class="prod-card-head wo">
+          <div class="prod-card-ref">Prémio único · Exclusivo Worten</div>
+          <div class="prod-card-name">Worten — Dano Acidental 2 Anos</div>
+          <div class="prod-card-desc">Dano acidental — 24 meses · sem equivalente RP</div>
+        </div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div><strong>Dano acidental</strong> (incluindo líquidos e humidade)</div></div>
+        <div class="cov-row"><span class="cov-icon plus">✅</span><div>Peças, mão-de-obra, transporte incluídos</div></div>
+        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Avarias mecânicas/elétricas excluídas</div></div>
+        <div class="cov-row"><span class="cov-icon minus">❌</span><div>Roubo e furto excluídos</div></div>
+        <div class="cov-row"><span class="cov-icon">💡</span><div>Idêntico ao 1 Ano mas com 24 meses de cobertura · sem equivalente RP</div></div>
+        <div class="cov-row"><span class="cov-icon">⚠️</span><div>Prazo de participação: 14 dias corridos</div></div>
+      </div>
+    </div>
+
+    <!-- ESCALÕES DE PREÇO -->
+    <div id="sw-escaloes" class="tab-panel">
+      <p style="font-size:13px;color:#888;margin-bottom:16px;">Escalões de preço para as diferentes modalidades de seguro de Smartwatch. A disponibilidade de algumas modalidades varia conforme o escalão.</p>
+
+      <div class="eyebrow">Seguro Mensal</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>99,00€</td><td>3,49€/mês</td><td>—</td><td>—</td></tr>
+            <tr><td>199,99€</td><td class="pt-eq">4,99€/mês</td><td class="pt-eq">4,99€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>299,99€</td><td class="pt-eq">7,49€/mês</td><td class="pt-eq">7,49€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>499,99€</td><td class="pt-eq">11,99€/mês</td><td class="pt-eq">11,99€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>999,99€</td><td>—</td><td>13,99€/mês</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="eyebrow" style="margin-top:20px;">Dano Acidental 1 Ano (prémio único)</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>99,00€</td><td>24,00€</td><td>—</td><td>—</td></tr>
+            <tr><td>199,99€</td><td>59,00€</td><td>—</td><td>—</td></tr>
+            <tr><td>299,99€</td><td class="pt-win">79,00€</td><td class="pt-lose">79,99€</td><td class="pt-win">RP −1€</td></tr>
+            <tr><td>499,99€</td><td>119,00€</td><td>—</td><td>—</td></tr>
+            <tr><td>999,99€</td><td class="pt-lose">169,00€</td><td class="pt-win">159,99€</td><td class="pt-win">Worten −9€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box" style="margin-top:16px;">
+        <strong>Mensal:</strong> Onde ambas as insígnias têm oferta, os preços são idênticos. A RP cobre o escalão mais baixo (~99€) que a Worten não tem; a Worten cobre o mais alto (~1000€) que a RP não tem.<br><br>
+        <strong>Dano Acidental 1 Ano:</strong> Apenas dois escalões são directamente comparáveis. Em ~300€ os preços são quase iguais; em ~1000€ a Worten é €9 mais barata.
+      </div>
+    </div>
+
   </div><!-- /tab-panels -->
 </div><!-- /cat-smartwatch -->
+
+<div id="cat-trotineta" class="cat-panel">
+
+  <div class="page-title">
+    <div class="meta">Categoria</div>
+    <h2>Trotinetes Elétricas</h2>
+    <div class="badge">💶 Exemplo: Trotinete €499,99</div>
+  </div>
+
+  <div class="tab-btn-row">
+    <button class="tab-btn active" data-cat="trotineta" data-tab="resumo">Resumo</button>
+    <button class="tab-btn" data-cat="trotineta" data-tab="mensal">Mensal RP vs Worten</button>
+    <button class="tab-btn" data-cat="trotineta" data-tab="escaloes">Escalões de Preço</button>
+  </div>
+
+  <div class="tab-panels">
+
+    <!-- RESUMO -->
+    <div id="tr-resumo" class="tab-panel active">
+      <div class="eyebrow">Opções comparáveis — Mensais (subscrição)</div>
+      <div class="table-wrap">
+        <table class="comp-simple">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>🔵 Rádio Popular (D&amp;G)</th>
+              <th>🔴 Worten (D&amp;G)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mensal — mobilidade elétrica</td>
+              <td>ProTech Mobilidade Eléctrica (DBM) · <strong>€9,99/mês</strong></td>
+              <td>Resolve Flex Mobility (AS7_AW7) · <strong>€9,99/mês</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">⚠️ Mesmo preço, coberturas muito diferentes: RP cobre <strong>avarias (incl. uso e desgaste) desde o início</strong>, dano acidental, roubo e furto — e garante substituição após 3 avarias iguais em 12 meses. Worten cobre apenas dano acidental, roubo e furto; avarias estão <strong>excluídas</strong>. Atenção: ambos excluem acessórios e consumíveis (baterias, rodas, correntes, pneus).</div>
+    </div>
+
+    <!-- MENSAL RP vs WORTEN -->
+    <div id="tr-mensal" class="tab-panel">
+      <div class="brand-row">
+        <span class="brand-pill pill-rp">🔵 RP: ProTech Mobilidade Eléctrica (DBM) — €9,99/mês</span>
+        <span class="brand-pill pill-wo">🔴 Worten: Resolve Flex Mobility (AS7_AW7) — €9,99/mês</span>
+      </div>
+      <div class="note-box" style="margin:12px 16px;">⚠️ Preço idêntico mas coberturas muito distintas: RP inclui avarias e substituição automática após 3 avarias; Worten exclui avarias por completo.</div>
+      <div class="table-wrap">
+        <table class="comp-table">
+          <thead><tr><th class="col-label"></th><th class="col-rp">🔵 RP — ProTech Mobilidade Eléctrica (DBM)</th><th class="col-wo">🔴 Worten — Resolve Flex Mobility (AS7_AW7)</th></tr></thead>
+          <tbody>
+            <tr class="row-section"><td colspan="3">Dados gerais</td></tr>
+            <tr><td class="td-label">Produto</td><td class="td-rp">Mega Garantia ProTech Mobilidade Eléctrica</td><td class="td-wo">Worten Resolve Flex Mobility</td></tr>
+            <tr><td class="td-label">Seguradora</td><td class="td-rp">D&amp;G Espanha · LPS PT 5002</td><td class="td-wo">D&amp;G Espanha · LPS PT 5002</td></tr>
+            <tr><td class="td-label">Preço</td><td class="td-rp"><strong>€9,99/mês</strong></td><td class="td-wo"><strong>€9,99/mês</strong></td></tr>
+            <tr><td class="td-label">Pagamento</td><td class="td-rp">1.ª fração na loja · restantes por débito direto em conta</td><td class="td-wo">1.ª fração na loja · restantes por débito direto em conta ou cartão (escolha na subscrição, não alterável)</td></tr>
+            <tr class="row-section"><td colspan="3">⚡ Diferenças — coberturas</td></tr>
+            <tr><td class="td-label">Avarias mecânicas/elétricas</td><td class="td-rp plus">✅ Incluídas desde o início (uso e desgaste incluídos)</td><td class="td-wo minus">❌ Excluídas (exceto se resultantes de dano acidental)</td></tr>
+            <tr><td class="td-label">Substituição após 3 avarias iguais</td><td class="td-rp plus">✅ Substituição automática em 12 meses</td><td class="td-wo minus">❌ Sem este benefício</td></tr>
+            <tr><td class="td-label">Sobrecarga elétrica</td><td class="td-rp muted">Não excluída explicitamente</td><td class="td-wo minus">❌ Excluída explicitamente</td></tr>
+            <tr class="row-section"><td colspan="3">Sem diferença relevante</td></tr>
+            <tr><td class="td-label">Dano acidental (incl. líquidos)</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Roubo (com violência)</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Furto Qualificado</td><td class="td-rp plus">✅ Incluído</td><td class="td-wo plus">✅ Incluído</td></tr>
+            <tr><td class="td-label">Peças, mão-de-obra, transporte</td><td class="td-rp plus">✅ Incluídos</td><td class="td-wo plus">✅ Incluídos</td></tr>
+            <tr><td class="td-label">Acessórios e consumíveis</td><td class="td-rp minus">❌ Excluídos (baterias, rodas, correntes, pneus…)</td><td class="td-wo minus">❌ Excluídos (baterias, rodas, correntes, pneus…)</td></tr>
+            <tr><td class="td-label">Danos de competição / segurança rodoviária</td><td class="td-rp minus">❌ Excluídos</td><td class="td-wo minus">❌ Excluídos</td></tr>
+            <tr><td class="td-label">Dano estético</td><td class="td-rp minus">❌ Excluído</td><td class="td-wo minus">❌ Excluído</td></tr>
+            <tr><td class="td-label">Perda do equipamento</td><td class="td-rp minus">❌ Excluída</td><td class="td-wo minus">❌ Excluída</td></tr>
+            <tr><td class="td-label">Limite por sinistro</td><td class="td-rp">Preço de compra</td><td class="td-wo">Preço de compra</td></tr>
+            <tr><td class="td-label">Prazo participação sinistro</td><td class="td-rp">14 dias corridos</td><td class="td-wo">14 dias corridos</td></tr>
+            <tr><td class="td-label">Cancelamento 30 dias</td><td class="td-rp plus">✅ Reembolso total</td><td class="td-wo plus">✅ Reembolso total</td></tr>
+            <tr><td class="td-label">Cobertura geográfica</td><td class="td-rp">Mundial · reparação em Portugal</td><td class="td-wo">Mundial · reparação em Portugal</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ESCALÕES DE PREÇO -->
+    <div id="tr-escaloes" class="tab-panel">
+      <p style="font-size:13px;color:#888;margin-bottom:16px;">Apenas a modalidade mensal está disponível para trotinetes eléctricas em ambas as insígnias.</p>
+
+      <div class="eyebrow">Seguro Mensal</div>
+      <div class="table-wrap">
+        <table class="price-table" style="table-layout:fixed;">
+          <colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Escalão produto</th>
+              <th style="background:#C62828;">🔴 Worten</th>
+              <th style="background:#1565C0;">🔵 RP</th>
+              <th style="background:#555;">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>249,99€</td><td class="pt-lose">7,99€/mês</td><td class="pt-win">6,19€/mês</td><td class="pt-win">RP −1,80€</td></tr>
+            <tr><td>499,99€</td><td class="pt-eq">9,99€/mês</td><td class="pt-eq">9,99€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>749,99€</td><td class="pt-eq">13,99€/mês</td><td class="pt-eq">13,99€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>999,99€</td><td class="pt-eq">13,99€/mês</td><td class="pt-eq">13,99€/mês</td><td class="pt-eq">Igual</td></tr>
+            <tr><td>1.499,99€</td><td class="pt-eq">16,99€/mês</td><td class="pt-eq">16,99€/mês</td><td class="pt-eq">Igual</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box" style="margin-top:16px;">
+        <strong>Mensal:</strong> A RP é mais barata apenas no escalão mais baixo (~250€), com uma diferença de −1,80€/mês. Em todos os restantes escalões os preços são idênticos. Note-se que os escalões ~750€ e ~1000€ têm o mesmo preço (13,99€/mês).
+      </div>
+    </div>
+
+  </div><!-- /tab-panels -->
+</div><!-- /cat-trotineta -->
 
 <script>
 // Categorias
@@ -1999,7 +2710,7 @@ for (var i = 0; i < navBtns.length; i++) {
 }
 
 // Tabs via botões
-var prefixMap = { 'imagem': 'imagem', 'gama-branca': 'gb', 'pequenos': 'pd', 'informatica': 'it', 'smartphones': 'sm', 'fotografia': 'fo', 'consolas': 'co', 'smartwatch': 'sw' };
+var prefixMap = { 'imagem': 'imagem', 'gama-branca': 'gb', 'pequenos': 'pd', 'informatica': 'it', 'smartphones': 'sm', 'fotografia': 'fo', 'consolas': 'co', 'smartwatch': 'sw', 'trotineta': 'tr' };
 var tabBtns = document.querySelectorAll('.tab-btn');
 for (var i = 0; i < tabBtns.length; i++) {
   tabBtns[i].addEventListener('click', function() {
